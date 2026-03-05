@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EdgeVector: Personal AI Knowledge Infrastructure — Technical Whitepaper</title>
+<title>Edge Vector Foundation — Personal Data Sovereignty: A Vision for Individual Control</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   @page {
@@ -25,7 +25,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── Title Page ── */
+  /* Title Page */
   .title-page {
     text-align: center;
     padding: 2.5in 0 1in;
@@ -59,7 +59,7 @@
     margin: 1.5em auto;
   }
 
-  /* ── Headings ── */
+  /* Headings */
   h2 {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 17pt;
@@ -82,14 +82,14 @@
     page-break-after: avoid;
   }
 
-  /* ── Paragraphs ── */
+  /* Paragraphs */
   p {
     margin-bottom: 0.8em;
     text-align: justify;
     hyphens: auto;
   }
 
-  /* ── Abstract ── */
+  /* Abstract */
   .abstract {
     border-left: 3px solid #999;
     padding-left: 1em;
@@ -98,7 +98,7 @@
     font-style: italic;
   }
 
-  /* ── Lists ── */
+  /* Lists */
   ul, ol {
     margin: 0.5em 0 1em 1.5em;
   }
@@ -107,7 +107,7 @@
   }
   ol li { padding-left: 0.2em; }
 
-  /* ── Blockquote ── */
+  /* Blockquote */
   blockquote {
     border-left: 3px solid #bbb;
     padding: 0.5em 0 0.5em 1em;
@@ -116,72 +116,21 @@
     color: #444;
   }
 
-  /* ── Code / Pre ── */
-  code {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.88em;
-    background: #f5f5f5;
-    padding: 1px 4px;
-    border-radius: 2px;
-  }
-
-  pre {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 9pt;
-    line-height: 1.5;
-    background: #f8f8f8;
-    border: 1px solid #e0e0e0;
-    padding: 0.8em 1em;
-    margin: 0.8em 0 1.2em;
-    overflow-x: auto;
-    white-space: pre;
-    page-break-inside: avoid;
-  }
-  pre code {
-    background: none;
-    padding: 0;
-  }
-
-  /* ── Tables ── */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0.8em 0 1.2em;
-    font-size: 10.5pt;
-    page-break-inside: avoid;
-  }
-  th, td {
-    text-align: left;
-    padding: 0.45em 0.7em;
-    border-bottom: 1px solid #ddd;
-    vertical-align: top;
-  }
-  th {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 600;
-    font-size: 10pt;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #555;
-    border-bottom: 2px solid #bbb;
-  }
-  tr:last-child td { border-bottom: 1px solid #ddd; }
-
-  /* ── Horizontal Rules ── */
+  /* Horizontal Rules */
   hr {
     border: none;
     border-top: 1px solid #ddd;
     margin: 2em 0;
   }
 
-  /* ── Section Numbers ── */
+  /* Section Numbers */
   .section-num {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 700;
     margin-right: 0.3em;
   }
 
-  /* ── Footer ── */
+  /* Footer */
   .footer {
     text-align: center;
     margin-top: 3em;
@@ -193,526 +142,290 @@
     font-style: italic;
   }
 
-  /* ── Diagram blocks ── */
-  .diagram {
-    background: #fafafa;
-    border: 1px solid #e0e0e0;
-    padding: 1em 1.5em;
-    margin: 1em 0 1.5em;
-    text-align: center;
-    page-break-inside: avoid;
-  }
-  .diagram pre {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-    display: inline-block;
-  }
-
-  /* ── Print styles ── */
+  /* Print styles */
   @media print {
     body { padding: 0; max-width: none; }
     h2 { page-break-before: auto; }
     .title-page { padding-top: 3in; }
-    pre, table, .diagram { page-break-inside: avoid; }
   }
 </style>
 </head>
 <body>
 
-<!-- ═══════════ TITLE PAGE ═══════════ -->
+<!-- TITLE PAGE -->
 <div class="title-page">
-  <h1>EdgeVector</h1>
-  <div class="subtitle">Personal AI Knowledge Infrastructure</div>
+  <h1>Edge Vector Foundation</h1>
+  <div class="subtitle">Personal Data Sovereignty</div>
   <div class="rule"></div>
-  <div class="subtitle" style="font-size:12pt;">A Technical Whitepaper</div>
+  <div class="subtitle" style="font-size:12pt;">A Vision for Individual Control</div>
   <div class="org">Edge Vector Foundation, 2026</div>
 </div>
 
-<!-- ═══════════ ABSTRACT ═══════════ -->
+<!-- ABSTRACT -->
 <div class="abstract">
-  <p>Artificial intelligence systems increasingly assist users in reasoning over complex information. However, current AI tools depend on centralized cloud infrastructure that requires users to surrender private data to remote servers. This architecture is fundamentally incompatible with privacy, data sovereignty, and the nature of personal knowledge.</p>
-  <p>This paper introduces <strong>EdgeVector</strong>, a new architecture for personal AI knowledge infrastructure that runs entirely on local edge devices. The reference implementation, <strong>FoldDB</strong>, is a database system that converts a user's local storage into an AI-queryable knowledge corpus&nbsp;&mdash; without any data leaving the machine.</p>
-  <p>We describe the system architecture, ingestion pipeline, query engine, encryption model, and performance characteristics. We argue that the convergence of capable local language models, high-capacity NVMe storage, and growing personal data volumes creates a unique opportunity to shift AI infrastructure from the cloud to the edge.</p>
+  <p>People have lost control over their personal data. It is scattered across dozens of platforms, stored in formats they cannot access, governed by terms they did not meaningfully consent to, and exploited in ways they cannot see. The Edge Vector Foundation exists to reverse this.</p>
+  <p>This paper presents the foundation's vision for <strong>personal data sovereignty</strong>&mdash;an open ecosystem where individuals control how their data is stored, who can access it, and how it is used. We describe six requirements for making this real: seamless ingestion, practical use, security by default, verifiable trustworthiness, long-term viability, and collective value. We then describe how two open-source systems&mdash;<strong>FoldDB</strong> and <strong>Exemem</strong>&mdash;work together to meet these requirements.</p>
 </div>
 
-<!-- ═══════════ 1. INTRODUCTION ═══════════ -->
-<h2><span class="section-num">1.</span> Introduction</h2>
+<!-- 1. THE PROBLEM -->
+<h2><span class="section-num">1.</span> The Problem</h2>
 
-<h3>1.1 The Problem</h3>
+<p>The contemporary digital landscape is defined by a paradox: people generate more personal data than ever before, yet they have less meaningful control over it than at any point in history.</p>
 
-<p>Modern knowledge work produces a vast and growing archive of personal data: source code, documents, emails, notes, research papers, configuration files, and more. These artifacts collectively represent a user's <em>intellectual corpus</em>&nbsp;&mdash; the accumulated output of their professional and creative work.</p>
+<p>Personal data&mdash;medical records, financial documents, photographs, messages, work products, creative output&mdash;resides in corporate silos, locked behind proprietary APIs and incompatible formats. Users do not own their data in any practical sense. They cannot move it freely between services. They cannot control who accesses it or how it is used. They cannot verify what has been done with it.</p>
 
-<p>AI assistants promise to make this corpus searchable and useful. In practice, however, every major AI platform requires users to upload their data to centralized cloud systems. This introduces several critical problems:</p>
+<p>This is not simply a privacy problem. It is an infrastructure problem. The tools people use every day&mdash;from email to cloud storage to social media&mdash;are built on an architecture where the service provider holds the data and the user holds nothing. When the provider changes terms, gets breached, or shuts down, the user's data goes with it.</p>
 
-<ol>
-  <li><strong>Privacy exposure.</strong> Sensitive data&nbsp;&mdash; proprietary code, confidential documents, personal communications&nbsp;&mdash; must be transmitted to and stored on third-party servers.</li>
-  <li><strong>Fragmented access.</strong> AI tools operate on individual documents, repositories, or conversations. No existing system provides unified semantic access across a user's entire data corpus.</li>
-  <li><strong>No local retrieval infrastructure.</strong> File systems organize data by location, not by meaning. Local AI models have no structured index to query against.</li>
-  <li><strong>Vendor lock-in.</strong> Cloud-based AI knowledge systems bind users to specific platforms, making data portability difficult or impossible.</li>
-</ol>
+<p>Previous attempts to return data ownership to individuals&mdash;from personal data stores to self-sovereign identity systems&mdash;have struggled with a critical challenge: how to make user-controlled data actually <em>useful</em>. Owning your data in a format no application can read, behind an interface no one can use, is ownership in name only.</p>
 
-<p>The fundamental tension is clear: AI needs structured access to data, but users need sovereignty over that data. These goals are treated as mutually exclusive by current architectures.</p>
+<p>The Edge Vector Foundation takes a different approach. Rather than asking people to choose between convenience and control, we are building infrastructure that makes control the more convenient option.</p>
 
-<h3>1.2 Our Thesis</h3>
+<!-- 2. THE VISION -->
+<h2><span class="section-num">2.</span> The Vision</h2>
 
-<p>EdgeVector proposes that this tension is resolvable. The key insight is:</p>
+<p>The foundation's mission is to ensure that people&mdash;not corporations or centralized platforms&mdash;determine how their data is stored, accessed, and used.</p>
 
-<blockquote>AI knowledge infrastructure does not need to be centralized. It can run locally, on the same machine where the data already lives.</blockquote>
+<p>Achieving this requires solving six problems simultaneously. A personal data system that is easy to fill but impossible to use is worthless. One that is useful but insecure is dangerous. One that is secure but cannot be trusted is theater. And one that serves only individuals, with no way to generate shared benefit, will never reach the scale needed to matter.</p>
 
-<p>Three converging trends make this feasible now:</p>
-
-<ul>
-  <li><strong>Local large language models.</strong> Models in the 2B&ndash;13B parameter range run efficiently on consumer hardware with acceptable latency and quality for retrieval-augmented generation (RAG) tasks.</li>
-  <li><strong>High-capacity NVMe storage.</strong> Multi-terabyte NVMe drives are commodity hardware, capable of sustaining the I/O throughput required for large-scale file indexing.</li>
-  <li><strong>Personal data explosion.</strong> The volume of data generated per knowledge worker continues to grow, increasing both the need for and the value of semantic search.</li>
-</ul>
-
-<!-- ═══════════ 2. SYSTEM ARCHITECTURE ═══════════ -->
-<h2><span class="section-num">2.</span> System Architecture</h2>
-
-<p>FoldDB is a <em>local AI knowledge database</em>. Unlike traditional databases that store application data, FoldDB indexes existing files on the user's filesystem and constructs semantic retrieval layers over them. The system is designed to be used by local AI models as a knowledge backend.</p>
-
-<h3>2.1 High-Level Architecture</h3>
-
-<div class="diagram">
-<pre><code>                  +-------------------------+
-                  |       User Interface    |
-                  |    (Chat / CLI / API)   |
-                  +-----------+-------------+
-                              |
-                              v
-                     +-----------------+
-                     |    Local LLM    |
-                     +-----------------+
-                              |
-                              v
-                     +-----------------+
-                     |     FoldDB      |
-                     |   Query Engine  |
-                     +--------+--------+
-                     /        |        \
-                    v         v         v
-             +---------+ +--------+ +----------+
-             |  File   | | Vector | | Metadata |
-             |  Index  | | Store  | |  Store   |
-             +---------+ +--------+ +----------+
-                    \        |        /
-                     v       v       v
-                +------------------------+
-                |      File System       |
-                |   (User's NVMe Drive)  |
-                +------------------------+</code></pre>
-</div>
-
-<p>The architecture consists of six core subsystems:</p>
+<p>The six requirements are:</p>
 
 <ol>
-  <li><strong>File Ingestion Engine</strong>&nbsp;&mdash; scans and parses files</li>
-  <li><strong>Metadata Extractor</strong>&nbsp;&mdash; derives structured metadata from content</li>
-  <li><strong>Vector Store</strong>&nbsp;&mdash; stores embeddings for semantic search</li>
-  <li><strong>Delta Scanner</strong>&nbsp;&mdash; detects and processes file changes</li>
-  <li><strong>Query Engine</strong>&nbsp;&mdash; combines multiple retrieval strategies</li>
-  <li><strong>Encryption Layer</strong>&nbsp;&mdash; protects content and keys at rest</li>
+  <li><strong>Seamless ingestion.</strong> It must be easy to get data in.</li>
+  <li><strong>Practical use.</strong> It must be easy to use the data once it is there.</li>
+  <li><strong>Security by default.</strong> The data must be protected without requiring expertise.</li>
+  <li><strong>Verifiable trustworthiness.</strong> Trust must be proven, not promised.</li>
+  <li><strong>Long-term viability.</strong> The system must work for decades, not just years.</li>
+  <li><strong>Collective value.</strong> Individuals who choose to participate must be able to benefit from the network.</li>
 </ol>
 
-<h3>2.2 Design Principles</h3>
+<p>The following sections describe each requirement and how the foundation's technology addresses it.</p>
+
+<!-- 3. SEAMLESS INGESTION -->
+<h2><span class="section-num">3.</span> Seamless Ingestion</h2>
+
+<p>A personal data store is only as valuable as the data inside it. If getting data in is difficult, people will not do it. The system must support two ingestion paths.</p>
+
+<h3>3.1 Self-Ingestion</h3>
+
+<p>Users must be able to import their own data&mdash;documents, photos, medical records, financial statements, emails, notes&mdash;directly from their devices. The system should accept data in whatever format it already exists and organize it automatically.</p>
+
+<p>FoldDB addresses this through a <strong>global schema registry</strong>: a shared catalog of data formats that every FoldDB instance uses. When new data arrives in an unfamiliar format, an AI-assisted schema generator analyzes the data, checks whether an existing schema can accommodate it, and either maps it to a known format or creates a new one. The result is that data flows in without the user needing to understand schemas, formats, or database design.</p>
+
+<p>Because every FoldDB instance shares the same schema registry, data organized by one person's instance is immediately compatible with every application built on FoldDB. This is the key insight: a global schema registry makes personal data ownership practical by eliminating the fragmentation that has historically made personal data stores unusable.</p>
+
+<h3>3.2 Third-Party Writes</h3>
+
+<p>Not all personal data originates from the individual. A doctor writes a diagnosis. A bank records a transaction. A colleague shares a document. An application generates usage data.</p>
+
+<p>The system must allow authorized third parties to write data into a person's data store with explicit permission. In FoldDB, this is governed by the same access control system that governs reads: the data owner sets a trust distance and permission policy, and only writers who meet the criteria can add data. Every third-party write is cryptographically signed by the writer, creating an auditable record of who contributed what.</p>
+
+<p>The combination of self-ingestion and permissioned third-party writes means that a person's data store becomes a single, comprehensive record of their information&mdash;regardless of where it originated.</p>
+
+<!-- 4. PRACTICAL USE -->
+<h2><span class="section-num">4.</span> Practical Use of Personal Data</h2>
+
+<p>Ownership is meaningful only if people can actually use their data. A data store that just sits there is a backup drive, not a tool. The system must enable three forms of practical use.</p>
+
+<h3>4.1 Applications Operating on Your Data</h3>
+
+<p>Software&mdash;including AI assistants&mdash;must be able to operate directly on a person's data without requiring that data to be uploaded to a centralized service.</p>
+
+<p>FoldDB makes this possible through its universal schema system. Because every FoldDB instance exposes the same schemas through the same API, an application written for one person's data works identically with every other person's data. Developers write code once; it works everywhere. This eliminates the integration tax that has historically made personal data stores impractical for application developers.</p>
+
+<p>AI assistants are one important application of this capability. A personal AI that can query your medical records, financial data, and work documents&mdash;all stored locally, all under your control&mdash;is far more useful than a cloud AI that sees only what you manually upload. But the architecture is not limited to AI. Any application&mdash;a budgeting tool, a health tracker, a project manager&mdash;can operate on the user's data through the same standardized interface.</p>
+
+<h3>4.2 Selective Disclosure</h3>
+
+<p>People regularly need to share specific information with trusted parties: medical records with a doctor, financial documents with an advisor, project files with a collaborator.</p>
+
+<p>In FoldDB, data is never accessed directly. Instead, users interact through <strong>folds</strong>&mdash;named interfaces that sit in front of stored values and enforce access policies on every operation. A fold defines which fields are visible, what transformations are applied, and who may read or write. The same underlying data can have multiple folds: one that shows a doctor everything, another that shows a researcher only de-identified data, and a third that shows a lender only a yes/no creditworthiness answer.</p>
+
+<p>Folds can apply irreversible transforms&mdash;such as hashing a name into a de-identified token&mdash;so that the recipient gets the information they need without seeing the underlying sensitive data. This is selective disclosure by design, not by policy: the system structurally cannot reveal more than the fold allows.</p>
+
+<h3>4.3 Permissioned API Access</h3>
+
+<p>External applications must be able to access user data through controlled endpoints with explicit authorization. FoldDB exposes a uniform API across all instances, and every API call passes through the fold's policy checks. An application that the user has authorized can read and write data within the bounds of its permissions; an application without authorization gets nothing&mdash;not an error message, not a partial result, nothing.</p>
+
+<p>This creates a practical ecosystem where applications compete on the quality of their service, not on the size of their data moat. Users can switch between applications freely because their data stays in their own store.</p>
+
+<!-- 5. SECURITY BY DEFAULT -->
+<h2><span class="section-num">5.</span> Security by Default</h2>
+
+<p>The system must protect data against unauthorized access while remaining practical to use. Security that requires expertise is security that most people will not have.</p>
+
+<h3>5.1 End-to-End Encryption</h3>
+
+<p>All data at rest is encrypted. Encryption keys are held by the user, not by any service provider. When data is backed up to the cloud, the cloud stores only ciphertext&mdash;encrypted data that is unreadable without the user's key. If the cloud is compromised, the data remains unreadable.</p>
+
+<p>This is not encryption as an add-on feature. It is the foundation of the architecture. The system is designed so that no one other than the user and their explicitly authorized parties can read the data, regardless of where it is stored.</p>
+
+<h3>5.2 Granular Access Permissions</h3>
+
+<p>FoldDB's access control operates through four independent, conjunctive mechanisms:</p>
 
 <ul>
-  <li><strong>Zero exfiltration.</strong> No data, metadata, telemetry, or analytics leave the local machine under any circumstance.</li>
-  <li><strong>Index, don't copy.</strong> FoldDB creates retrieval layers over existing files. It does not duplicate or relocate user data.</li>
-  <li><strong>Format-agnostic.</strong> The system supports a broad whitelist of file types through pluggable parsers.</li>
-  <li><strong>Background-first.</strong> Indexing and re-indexing happen as background processes that do not block user interaction.</li>
+  <li><strong>Trust distance.</strong> The data owner assigns a numerical distance to other users. Each data field has a policy specifying the maximum distance for reading and writing. A doctor at distance 1 can see clinical records; a researcher at distance 3 sees only de-identified data; an unauthorized user at distance 10 sees nothing.</li>
+  <li><strong>Cryptographic capabilities.</strong> Access tokens tied to specific public keys, with bounded quotas. A capability might grant 100 reads of a specific field, after which access is automatically revoked.</li>
+  <li><strong>Security labels.</strong> A classification system that prevents information from flowing from higher to lower security levels through chains of data transformations.</li>
+  <li><strong>Payment gates.</strong> Access can require payment, with costs that are a function of trust distance.</li>
 </ul>
 
-<!-- ═══════════ 3. FILE INGESTION ═══════════ -->
-<h2><span class="section-num">3.</span> File Ingestion Pipeline</h2>
+<p>All four checks must pass for any data access. Failure at any level produces no output&mdash;no partial results, no error messages that reveal structure. This is not a policy promise; it is a structural guarantee enforced by the system's design.</p>
 
-<h3>3.1 Supported Formats</h3>
+<h3>5.3 Economic Safeguards</h3>
 
-<table>
-  <thead>
-    <tr><th>Category</th><th>Formats</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Text</td><td>Markdown, plain text, RTF</td></tr>
-    <tr><td>Code</td><td>All major languages (via tree-sitter)</td></tr>
-    <tr><td>Data</td><td>JSON, CSV, YAML, TOML</td></tr>
-    <tr><td>Documents</td><td>PDF, DOCX, HTML</td></tr>
-    <tr><td>Email</td><td>EML, MBOX</td></tr>
-    <tr><td>Notes</td><td>Org-mode, Apple Notes export</td></tr>
-  </tbody>
-</table>
+<p>One of the most novel aspects of the security model is the use of economic mechanisms to prevent large-scale data extraction. Access costs can be configured to increase exponentially with trust distance and with the volume of data accessed. This means that while a trusted doctor can access a patient's records at minimal cost, an adversary attempting to extract data across thousands of users faces costs that grow exponentially&mdash;making large-scale harvesting or inference attacks economically impractical, even when individual queries are affordable.</p>
 
-<p>File types outside this whitelist are ignored. The whitelist is user-configurable and extensible.</p>
+<p>This economic layer complements traditional access control. Even if an attacker obtains valid credentials, the cost structure makes mass extraction prohibitive.</p>
 
-<h3>3.2 Parsing Strategy</h3>
+<!-- 6. VERIFIABLE TRUSTWORTHINESS -->
+<h2><span class="section-num">6.</span> Verifiable Trustworthiness</h2>
 
-<p>Each file type has a dedicated parser that extracts two outputs:</p>
+<p>A system that asks people to store their most sensitive data must provide guarantees about what happens to that data. Trust must be proven, not promised.</p>
 
-<ol>
-  <li><strong>Text content</strong>&nbsp;&mdash; the raw textual content of the file, normalized to UTF-8.</li>
-  <li><strong>Structured metadata</strong>&nbsp;&mdash; format-specific attributes extracted during parsing.</li>
-</ol>
+<h3>6.1 Signed Writes</h3>
 
-<p>For source code files, the parser additionally extracts:</p>
+<p>Every data entry&mdash;whether written by the owner, a doctor, a bank, or any other authorized party&mdash;is cryptographically signed. The signature binds the writer's identity to the data and the timestamp. This means you can verify who wrote what, and when. Tampered data is detectable. Authenticity is provable.</p>
+
+<p>All data is stored in an append-only log: entries are never modified or deleted after insertion. Every previous version of every record is retained, providing a complete, auditable history that supports rollback, dispute resolution, and regulatory compliance.</p>
+
+<h3>6.2 Transparent Access Logs</h3>
+
+<p>Every read, every read attempt, and every failed access attempt is recorded in an audit log. The user always knows who accessed their data, what they accessed, when they accessed it, and whether the access succeeded or failed. This audit trail is itself append-only and cryptographically signed, making it tamper-evident.</p>
+
+<p>This is a fundamental departure from the current model, where users have no visibility into how their data is being used by the platforms that hold it.</p>
+
+<h3>6.3 Data Provenance</h3>
+
+<p>When data is transformed&mdash;for example, when a medical record is de-identified for research, or when a financial summary is derived from transaction history&mdash;the transformation is performed by a registered, vetted function from a shared catalog called the Universal Transform Registry.</p>
+
+<p>Each transform is content-addressed (identified by a hash of its definition), deterministic (same input always produces the same output), and publicly auditable. This means that derived data can be traced to its original source, the transformation that produced it can be independently verified, and the correctness of the output can be validated by anyone.</p>
+
+<p>This chain of provenance&mdash;from raw data through signed writes, through registered transforms, to derived outputs&mdash;creates a system where trust is not a matter of faith. It is a matter of verifiable cryptographic proof.</p>
+
+<!-- 7. LONG-TERM VIABILITY -->
+<h2><span class="section-num">7.</span> Long-Term Viability</h2>
+
+<p>A personal data system must remain viable for decades. Medical records, financial history, family photographs, and creative work are not disposable. The system must outlast any individual service provider, any particular technology, and any specific device.</p>
+
+<h3>7.1 Resilience Through Encrypted Cloud Backup</h3>
+
+<p>FoldDB supports encrypted cloud backups that provide redundancy without surrendering sovereignty. The cloud stores ciphertext&mdash;encrypted data that is useless without the user's key. If a laptop is lost, the data can be restored. If a cloud provider is compromised, the data remains unreadable. The cloud provides resilience, not access.</p>
+
+<p>This dual architecture&mdash;local-first operation with encrypted cloud backup&mdash;means the system works offline, survives hardware failures, and does not depend on any single provider for continuity.</p>
+
+<h3>7.2 Accessible Permission Management</h3>
+
+<p>The access control system described in Section 5 is powerful, but power without usability is dangerous. A non-technical user cannot be expected to manage trust distances, cryptographic capabilities, and security labels manually.</p>
+
+<p>The foundation is building AI-assisted interfaces that help users manage their permissions in plain language. Instead of configuring a fold with <em>W1 R3</em> trust distance policies, a user says: "Let my doctor see my medical records, but no one else." The AI translates this into the appropriate policy configuration, explains what it means in concrete terms, and asks for confirmation.</p>
+
+<p>Data sovereignty should not require a computer science degree. The system must be as easy to manage as the corporate silos it replaces&mdash;and more transparent about what it does.</p>
+
+<!-- 8. COLLECTIVE VALUE -->
+<h2><span class="section-num">8.</span> Collective Value from Personal Data</h2>
+
+<p>A personal data system that serves only individuals will struggle to reach the scale needed to matter. The real power of data emerges when it can be combined across people&mdash;but historically, this has required surrendering it to a central authority. The Edge Vector Foundation's architecture enables collective value without centralized ownership.</p>
+
+<h3>8.1 Communal Computation on Anonymized Data</h3>
+
+<p>Exemem, the foundation's networked computation layer, enables a fundamentally new form of collective intelligence. When users choose to participate, their data is converted into vector embeddings&mdash;mathematical representations that capture the semantic meaning of the data without revealing the specific content. These embeddings are published to a shared network.</p>
+
+<p>The critical privacy mechanism is <strong>per-entry derived pseudonyms</strong>. Every embedding is tagged with a unique, one-time public key that cannot be linked to the user's identity or to any of their other entries. An observer who sees 1,000 entries sees 1,000 unrelated pseudonyms. They cannot determine whether these belong to 1,000 people or one person. Unlike conventional pseudonymity, where a single alias is reused, this system generates a fresh identity for every data entry.</p>
+
+<p>This enables powerful collective queries. A public health researcher can ask: "How many people match this rare disease profile?" and receive an answer&mdash;47 matching entries&mdash;without learning who any of them are, whether any two belong to the same patient, or seeing any raw medical data. The embeddings power discovery; the folds protect content.</p>
+
+<p>Remarkably, anonymity in this system <em>strengthens</em> as the network grows. With more users and more entries, the set of people who could plausibly own any given entry becomes larger, making deanonymization harder, not easier. This is the opposite of conventional social networks, where more data means more profiling.</p>
+
+<h3>8.2 Interpersonal Sharing</h3>
+
+<p>Users can share information with friends, collaborators, or communities in a controlled manner. Because every interaction goes through the fold system, the sharer determines exactly what the recipient sees. You can share travel recommendations without revealing your itinerary. You can share research findings without exposing your raw data. You can share a health insight without disclosing your medical records.</p>
+
+<p>Sharing is a choice, not a requirement. And unlike sharing on a social platform, the data remains in the owner's store&mdash;the recipient gets access, not a copy.</p>
+
+<h3>8.3 Data Marketplaces</h3>
+
+<p>Individuals may choose to allow specific queries against their data and receive compensation when relevant matches are found. The architecture supports this through the combination of public embeddings for discovery and fold-gated access for content.</p>
+
+<p>Consider a scenario: a company is looking for people who match a particular demographic and interest profile for market research. The query runs against the network's public embeddings. Matching entries are discovered. The company can then request access to specific data through the fold system, paying the price set by each data owner. The data owner sees the request, controls what is revealed, and receives compensation.</p>
+
+<p>The user sets the terms. The user controls the access. The user receives the value. This inverts the current model, where platforms harvest user data and sell access to it without the user's knowledge or compensation.</p>
+
+<!-- 9. HOW IT WORKS TOGETHER -->
+<h2><span class="section-num">9.</span> How It Works Together</h2>
+
+<p>The foundation's vision is realized through two complementary open-source systems.</p>
+
+<h3>9.1 FoldDB: The Personal Data Store</h3>
+
+<p>FoldDB is the core database. Each user runs their own instance. It provides:</p>
 
 <ul>
-  <li>Function and method names</li>
-  <li>Class and type definitions</li>
-  <li>Comments and docstrings</li>
-  <li>Import/dependency declarations</li>
-  <li>File structure (module hierarchy)</li>
+  <li><strong>A global schema registry</strong> that ensures every instance speaks the same data language, making applications universally compatible.</li>
+  <li><strong>Folds</strong>&mdash;policy-enforcing interfaces that sit between the data and anyone who wants to access it. Folds control what is visible, apply transformations, and enforce trust distance, capabilities, security labels, and payment requirements.</li>
+  <li><strong>Signed, append-only storage</strong> where every write is authenticated and every version is retained.</li>
+  <li><strong>A Universal Transform Registry</strong> of vetted, deterministic data transformations that enable verifiable data provenance.</li>
+  <li><strong>Encrypted cloud backup</strong> for resilience without surrendering control.</li>
 </ul>
 
-<p>Parsing is implemented as a pipeline of composable stages:</p>
+<p>FoldDB is where your data lives. It is the sovereignty layer.</p>
 
-<pre><code>File &rarr; Format Detection &rarr; Parser Selection &rarr; Content Extraction
-                                               &rarr; Metadata Extraction
-                                               &rarr; Chunk Generation
-                                               &rarr; Embedding Generation</code></pre>
+<h3>9.2 Exemem: The Network Layer</h3>
 
-<h3>3.3 Chunking</h3>
-
-<p>Documents are split into overlapping chunks for embedding. The chunking strategy is format-aware:</p>
+<p>Exemem is the networked computation platform built on top of FoldDB. It provides:</p>
 
 <ul>
-  <li><strong>Code:</strong> chunks align to function/class boundaries where possible.</li>
-  <li><strong>Prose:</strong> chunks split on paragraph or section boundaries.</li>
-  <li><strong>Data:</strong> chunks split on record boundaries (rows, objects).</li>
+  <li><strong>Public vector embeddings</strong> that enable discovery across the network without exposing raw data.</li>
+  <li><strong>Per-entry derived pseudonyms</strong> that make entries unlinkable&mdash;no two entries can be connected to the same person.</li>
+  <li><strong>Similarity discovery</strong> that lets users find matching data across the entire network.</li>
+  <li><strong>Collective computation</strong>&mdash;clustering, trend analysis, anomaly detection&mdash;on the public embedding layer.</li>
+  <li><strong>A routing layer</strong> that connects discovery to access without revealing the mapping between pseudonyms and real identities.</li>
 </ul>
 
-<p>Chunk size targets 512 tokens with 64-token overlap, configurable per format.</p>
-
-<!-- ═══════════ 4. DELTA SCANNER ═══════════ -->
-<h2><span class="section-num">4.</span> Delta Scanner</h2>
-
-<h3>4.1 Purpose</h3>
-
-<p>The delta scanner is a background daemon that keeps the index synchronized with the filesystem. Rather than re-indexing the entire drive on each pass, it detects only the files that have changed and processes them incrementally.</p>
+<p>Exemem is how your data creates value beyond your own use. It is the network layer.</p>
 
-<h3>4.2 Algorithm</h3>
+<h3>9.3 The Two Layers Together</h3>
 
-<pre><code>1. Walk the target directory tree
-2. For each file:
-   a. Compute content hash (BLAKE3)
-   b. Compare against stored hash in metadata store
-   c. If hash differs or file is new:
-      - Re-parse content
-      - Update metadata
-      - Regenerate embeddings
-      - Update vector index
-   d. If file is deleted:
-      - Remove from all indexes
-3. Record scan timestamp
-4. Sleep until next scan interval</code></pre>
-
-<h3>4.3 Performance Characteristics</h3>
-
-<ul>
-  <li><strong>Hashing:</strong> BLAKE3 processes data at memory bandwidth speeds (&gt;10 GB/s on modern hardware), making hash comparison negligible in cost relative to I/O.</li>
-  <li><strong>Incremental updates:</strong> Only changed files trigger the full parse-embed pipeline. A typical scan of 500,000 files with &lt;1% change rate completes in seconds.</li>
-  <li><strong>Filesystem events:</strong> On supported platforms, the scanner optionally subscribes to filesystem notification APIs (FSEvents on macOS, inotify on Linux) to detect changes without polling.</li>
-</ul>
+<p>The architecture has a clean separation: Exemem handles <em>discovery</em> (finding relevant data across the network), and FoldDB handles <em>access</em> (controlling what is revealed and to whom). Discovery is public and pseudonymous. Access is private and policy-controlled.</p>
 
-<!-- ═══════════ 5. METADATA ═══════════ -->
-<h2><span class="section-num">5.</span> Metadata Extraction</h2>
-
-<h3>5.1 Schema</h3>
-
-<p>Every indexed file produces a metadata record with the following fields:</p>
-
-<table>
-  <thead>
-    <tr><th>Field</th><th>Type</th><th>Description</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><code>file_path</code></td><td>string</td><td>Absolute path to the source file</td></tr>
-    <tr><td><code>file_hash</code></td><td>bytes</td><td>BLAKE3 content hash</td></tr>
-    <tr><td><code>file_size</code></td><td>u64</td><td>Size in bytes</td></tr>
-    <tr><td><code>mime_type</code></td><td>string</td><td>Detected MIME type</td></tr>
-    <tr><td><code>created_at</code></td><td>timestamp</td><td>File creation time</td></tr>
-    <tr><td><code>modified_at</code></td><td>timestamp</td><td>Last modification time</td></tr>
-    <tr><td><code>indexed_at</code></td><td>timestamp</td><td>Last indexing time</td></tr>
-    <tr><td><code>title</code></td><td>string?</td><td>Extracted or inferred title</td></tr>
-    <tr><td><code>tags</code></td><td>string[]</td><td>Extracted tags or categories</td></tr>
-    <tr><td><code>language</code></td><td>string?</td><td>Programming language (for code)</td></tr>
-    <tr><td><code>symbols</code></td><td>string[]</td><td>Function names, classes, exports</td></tr>
-    <tr><td><code>structure</code></td><td>json</td><td>Document outline / heading hierarchy</td></tr>
-    <tr><td><code>chunk_count</code></td><td>u32</td><td>Number of chunks generated</td></tr>
-  </tbody>
-</table>
-
-<h3>5.2 Storage</h3>
-
-<p>Metadata is stored in a local embedded database (Sled or SQLite). The metadata store supports full-text search over extracted text fields, filtered queries by file type, date range, tags, or symbols, and fast lookup by file path or content hash.</p>
-
-<!-- ═══════════ 6. VECTOR INDEX ═══════════ -->
-<h2><span class="section-num">6.</span> Vector Index</h2>
-
-<h3>6.1 Embedding Generation</h3>
-
-<p>Each chunk is embedded using a local embedding model. The default model is a quantized sentence-transformer (e.g., <code>all-MiniLM-L6-v2</code> or <code>bge-small-en-v1.5</code>) running on CPU or GPU. Embedding dimensions: 384 (configurable based on model choice).</p>
-
-<h3>6.2 Index Structure</h3>
-
-<p>The vector index uses <strong>HNSW (Hierarchical Navigable Small World)</strong> graphs for approximate nearest neighbor search. HNSW provides sub-millisecond query latency at million-scale vector counts, low memory overhead with memory-mapped storage, and incremental insertion without full rebuilds.</p>
-
-<h3>6.3 Storage Layout</h3>
-
-<pre><code>fold_db/
-├── metadata.db              # Metadata store (Sled/SQLite)
-├── vector_index/
-│   ├── hnsw.bin             # HNSW graph structure
-│   └── vectors.bin          # Raw embedding vectors
-├── document_store/
-│   ├── chunks/              # Serialized chunk content
-│   └── mappings/            # Chunk-to-file mappings
-└── encryption_keys/
-    ├── master.key.enc       # Encrypted master key
-    └── keyring.db           # Per-file key derivations</code></pre>
-
-<!-- ═══════════ 7. QUERY ENGINE ═══════════ -->
-<h2><span class="section-num">7.</span> Query Engine</h2>
-
-<h3>7.1 Multi-Strategy Retrieval</h3>
-
-<p>The query engine combines three retrieval strategies and merges their results:</p>
-
-<ol>
-  <li><strong>Semantic search.</strong> The user's query is embedded and compared against the vector index using cosine similarity. Returns the top-k most semantically relevant chunks.</li>
-  <li><strong>Keyword search.</strong> BM25 or full-text search over the metadata store. Catches exact matches that semantic search may rank lower.</li>
-  <li><strong>Metadata filtering.</strong> Structured filters narrow results by file type, date range, language, symbol name, or tags.</li>
-</ol>
-
-<p>Results from all three strategies are merged using <strong>reciprocal rank fusion (RRF)</strong>, which produces a unified ranking without requiring score normalization across heterogeneous retrieval methods.</p>
-
-<h3>7.2 Query API</h3>
-
-<p>FoldDB exposes a local HTTP API and an MCP (Model Context Protocol) interface for AI agent integration.</p>
+<p>This separation means that the network can grow and become more useful without the privacy risks that growth creates in conventional systems. More participants means better discovery. More participants also means larger anonymity sets, making deanonymization harder. Value and privacy grow together.</p>
 
-<p><strong>REST API:</strong></p>
-
-<pre><code>POST /v1/search
-{
-  "query": "distributed encryption design decisions",
-  "filters": {
-    "file_type": ["md", "rs", "pdf"],
-    "modified_after": "2025-01-01"
-  },
-  "top_k": 20
-}
+<!-- 10. WHAT THIS MAKES POSSIBLE -->
+<h2><span class="section-num">10.</span> What This Makes Possible</h2>
 
-GET /v1/document/{document_id}
-GET /v1/document/{document_id}/chunks
-GET /v1/stats</code></pre>
-
-<p><strong>MCP Interface:</strong> FoldDB registers as an MCP tool provider, exposing <code>search</code>, <code>get_document</code>, and <code>list_files</code> tools that any MCP-compatible AI agent can invoke directly.</p>
-
-<h3>7.3 Query Pipeline</h3>
+<p>When these pieces come together, a new class of interactions becomes possible:</p>
 
-<div class="diagram">
-<pre><code>User Query
-    │
-    ├──→ Embed query ──→ Vector search (top-k)  ──┐
-    ├──→ Tokenize    ──→ Keyword search (BM25)  ──┼──→ RRF Merge ──→ Results
-    └──→ Parse filters ──→ Metadata filter      ──┘</code></pre>
-</div>
+<p><strong>Healthcare.</strong> A patient's complete medical history lives in their personal data store. Their doctor writes to it directly. A specialist sees only the relevant records. A researcher can discover that 47 patients match a rare disease profile&mdash;without seeing any individual records or knowing who any of them are. If a patient wants to participate in a clinical trial, they reveal precisely the information needed, receive compensation, and retain control.</p>
 
-<!-- ═══════════ 8. SECURITY ═══════════ -->
-<h2><span class="section-num">8.</span> Security Model</h2>
-
-<h3>8.1 Threat Model</h3>
-
-<p>FoldDB assumes the following threat model:</p>
-
-<ul>
-  <li><strong>Trusted:</strong> The local machine and its operating system.</li>
-  <li><strong>Untrusted:</strong> All networks, cloud services, and external processes.</li>
-  <li><strong>Goal:</strong> Even if the FoldDB data directory is exfiltrated (e.g., stolen laptop), the content must remain unreadable without the user's passphrase.</li>
-</ul>
-
-<h3>8.2 Encryption Architecture</h3>
-
-<table>
-  <thead>
-    <tr><th>Layer</th><th>Encryption</th><th>Rationale</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><strong>Content</strong></td><td>AES-256-GCM</td><td>All indexed content and chunks encrypted</td></tr>
-    <tr><td><strong>Metadata</strong></td><td>Optional (AES-256)</td><td>Optionally plaintext for faster filtering</td></tr>
-    <tr><td><strong>Keys</strong></td><td>Encrypted at rest</td><td>Master key derived from user passphrase</td></tr>
-  </tbody>
-</table>
-
-<h3>8.3 Key Management</h3>
-
-<div class="diagram">
-<pre><code>User Passphrase
-       │
-       v
-   Argon2id KDF ──→ Master Key (256-bit)
-                        │
-                        v
-                   HKDF Derivation
-                   /       |       \
-                  v        v        v
-           Content Key  Metadata  Vector Key
-                        Key</code></pre>
-</div>
-
-<ul>
-  <li>The <strong>master key</strong> is derived from the user's passphrase using Argon2id with high memory and iteration parameters.</li>
-  <li><strong>Per-purpose keys</strong> are derived from the master key using HKDF.</li>
-  <li>The master key is never stored in plaintext. It is held in memory only while the application is running and the user has authenticated.</li>
-  <li>A <strong>public/private keypair</strong> (Ed25519) is generated at first launch for future node-to-node authentication in distributed scenarios.</li>
-</ul>
-
-<h3>8.4 Zero-Exfiltration Guarantee</h3>
-
-<p>FoldDB enforces a strict no-network policy:</p>
-
-<ul>
-  <li>The application makes <strong>zero outbound network connections</strong> during normal operation.</li>
-  <li>The local API binds exclusively to <code>127.0.0.1</code>.</li>
-  <li>No telemetry, crash reports, or update checks are transmitted.</li>
-  <li>Network access is only used if the user explicitly enables optional cloud sync (P1 feature).</li>
-</ul>
-
-<!-- ═══════════ 9. AI INTEGRATION ═══════════ -->
-<h2><span class="section-num">9.</span> AI Integration</h2>
-
-<h3>9.1 Local LLM</h3>
-
-<p>FoldDB ships with a bundled 2B-parameter language model for out-of-the-box functionality. Users can configure any local model that exposes an OpenAI-compatible API (Ollama, llama.cpp, LM Studio, etc.).</p>
-
-<h3>9.2 Retrieval-Augmented Generation (RAG)</h3>
-
-<p>The standard query flow follows a RAG pattern:</p>
-
-<ol>
-  <li>User submits natural language query</li>
-  <li>Query engine retrieves relevant chunks (Section 7)</li>
-  <li>Retrieved chunks are injected into the LLM prompt as context</li>
-  <li>LLM generates a grounded response with source citations</li>
-  <li>Response includes file paths and chunk references for verification</li>
-</ol>
-
-<h3>9.3 Agent Tooling</h3>
-
-<p>For AI agent frameworks, FoldDB functions as a tool provider:</p>
-
-<ul>
-  <li><strong>MCP server</strong>&nbsp;&mdash; compatible with Claude, Cursor, and other MCP-aware agents</li>
-  <li><strong>Function calling</strong>&nbsp;&mdash; exposes search/retrieve/list as callable tools</li>
-  <li><strong>Streaming</strong>&nbsp;&mdash; supports streaming chunk retrieval for long-running agent workflows</li>
-</ul>
-
-<p>This allows any local AI agent to treat the user's entire filesystem as a queryable knowledge base.</p>
+<p><strong>Finance.</strong> A person's financial records are in their data store. A lender queries whether they qualify for a mortgage and receives a signed yes/no answer&mdash;without seeing bank statements, pay stubs, or tax returns. A financial advisor sees the data they need to give advice. A tax preparer sees exactly what is required for filing, nothing more.</p>
 
-<!-- ═══════════ 10. PERFORMANCE ═══════════ -->
-<h2><span class="section-num">10.</span> Performance</h2>
+<p><strong>Creative work.</strong> A musician stores their compositions. The embeddings are published to the network. If someone publishes a suspiciously similar track, the musician can discover the match, verify the timestamps in the append-only log, and establish a verifiable evidence trail&mdash;all without a centralized rights management system.</p>
 
-<h3>10.1 Targets</h3>
+<p><strong>Personal life.</strong> Your photographs, messages, and memories are in your data store. You share what you choose with the people you choose. If someone else has photos of you, you can discover that fact through the network&mdash;and request access or removal&mdash;without anyone's photo library being browsed or exposed.</p>
 
-<table>
-  <thead>
-    <tr><th>Metric</th><th>Target</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Installation time</td><td>&lt; 2 minutes</td></tr>
-    <tr><td>Initial indexing speed</td><td>&gt; 200,000 files/hr</td></tr>
-    <tr><td>Incremental scan (500K files)</td><td>&lt; 10 seconds</td></tr>
-    <tr><td>Query latency (semantic)</td><td>&lt; 500ms</td></tr>
-    <tr><td>Query latency (keyword)</td><td>&lt; 100ms</td></tr>
-    <tr><td>Memory usage (idle)</td><td>&lt; 200 MB</td></tr>
-    <tr><td>Memory usage (indexing)</td><td>&lt; 1 GB</td></tr>
-    <tr><td>Disk overhead</td><td>~20% of source</td></tr>
-  </tbody>
-</table>
+<p>In each case, the pattern is the same: the individual controls the data. Access is explicit, granular, and auditable. Collective value emerges from participation, not from surrender.</p>
 
-<h3>10.2 Optimizations</h3>
+<!-- 11. ORGANIZATIONAL STRUCTURE -->
+<h2><span class="section-num">11.</span> Organizational Structure</h2>
 
-<ul>
-  <li><strong>Parallel ingestion.</strong> File parsing and embedding generation are parallelized across available CPU cores.</li>
-  <li><strong>Memory-mapped I/O.</strong> The vector index and metadata store use memory-mapped files, allowing the OS to manage caching efficiently.</li>
-  <li><strong>Lazy embedding.</strong> Embeddings are generated on-demand for newly added files and cached persistently. Unchanged files are never re-embedded.</li>
-  <li><strong>Tiered storage.</strong> Hot metadata (frequently queried) remains in memory; cold data is accessed via memory-mapped disk.</li>
-</ul>
+<p>The Edge Vector Foundation is a non-profit organization that governs the open-source ecosystem. It maintains FoldDB, the schema registry, the Universal Transform Registry, and the network protocols. Its mandate is the long-term health of personal data infrastructure.</p>
 
-<!-- ═══════════ 11. APPLICATIONS ═══════════ -->
-<h2><span class="section-num">11.</span> Applications</h2>
+<p>A for-profit subsidiary builds commercial products on top of the open-source foundation: managed cloud backup, enterprise features, mobile applications, and premium support. Revenue funds continued development of the free tools. The subsidiary can never close-source the foundation's work.</p>
 
-<h3>11.1 Near-Term (v1)</h3>
+<p>This structure ensures that the core infrastructure remains free, open, and community-governed, while creating a sustainable path for long-term development.</p>
 
-<ul>
-  <li><strong>Personal knowledge search.</strong> Ask natural language questions across all local files.</li>
-  <li><strong>Codebase understanding.</strong> Query function definitions, design patterns, and architectural decisions across repositories.</li>
-  <li><strong>Document recall.</strong> Find documents by content rather than filename or folder.</li>
-  <li><strong>Research synthesis.</strong> Surface connections between papers, notes, and code across projects.</li>
-</ul>
+<!-- 12. CONCLUSION -->
+<h2><span class="section-num">12.</span> Conclusion</h2>
 
-<h3>11.2 Medium-Term (v2)</h3>
+<p>The current model of personal data management is broken. People's most sensitive information is scattered across corporate silos, accessed without meaningful consent, and exploited without compensation. This is not inevitable. It is a consequence of infrastructure that was built to serve platforms, not people.</p>
 
-<ul>
-  <li><strong>Meeting preparation.</strong> Before a meeting, query FoldDB for all relevant context&nbsp;&mdash; past notes, related code changes, prior decisions.</li>
-  <li><strong>Cloud sync and resilience.</strong> Optional encrypted backup to user-controlled cloud storage.</li>
-  <li><strong>Mobile access.</strong> Query your knowledge base from a mobile device via encrypted tunnel to your local machine.</li>
-</ul>
+<p>The Edge Vector Foundation is building the alternative: open infrastructure where individuals control their data, where access is explicit and verifiable, where security is structural rather than contractual, and where collective value does not require centralized ownership.</p>
 
-<h3>11.3 Long-Term Vision</h3>
+<p>The technical foundations exist. FoldDB provides the personal data store with policy-enforcing folds, signed writes, and encrypted storage. Exemem provides the network layer with pseudonymous discovery and collective computation. Together, they form an ecosystem where data sovereignty is not a limitation but a feature&mdash;where control and utility reinforce each other rather than competing.</p>
 
-<p>EdgeVector envisions a future where individuals operate <strong>sovereign AI knowledge nodes</strong>. Each node indexes its owner's data locally, runs its own AI models, and optionally connects to other nodes in a <em>distributed knowledge network</em>.</p>
+<p>The question is not whether personal data sovereignty is technically possible. It is. The question is whether we build the infrastructure to make it the default.</p>
 
-<p>In this architecture, collaboration happens through structured queries between nodes, not by centralizing data. Privacy is preserved because each node decides what to share, with whom, and under what conditions.</p>
-
-<p>This is the vision of <strong>personal AI infrastructure</strong>&nbsp;&mdash; the computational and data sovereignty equivalent of personal computing.</p>
-
-<!-- ═══════════ 12. RELATED WORK ═══════════ -->
-<h2><span class="section-num">12.</span> Related Work</h2>
-
-<table>
-  <thead>
-    <tr><th>System</th><th>Approach</th><th>Key Limitation</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>ChatGPT / Claude</td><td>Cloud LLM + uploaded documents</td><td>Data leaves the machine</td></tr>
-    <tr><td>GitHub Copilot</td><td>Cloud LLM + code context</td><td>Limited to code; cloud-dependent</td></tr>
-    <tr><td>Apple Spotlight</td><td>Local keyword search</td><td>No semantic search; no AI integration</td></tr>
-    <tr><td>Obsidian + plugins</td><td>Local notes with community search</td><td>Single format; no universal file index</td></tr>
-    <tr><td>Rewind.ai</td><td>Local screen recording + search</td><td>Screen-level; no structured retrieval</td></tr>
-    <tr><td>RAGFlow / PrivateGPT</td><td>Local RAG over documents</td><td>No background sync; manual upload</td></tr>
-  </tbody>
-</table>
-
-<p>FoldDB differentiates by combining <strong>automatic filesystem indexing</strong>, <strong>background incremental sync</strong>, <strong>multi-format parsing</strong>, <strong>encrypted storage</strong>, and <strong>native AI agent integration</strong> in a single local system.</p>
-
-<!-- ═══════════ 13. ORGANIZATION ═══════════ -->
-<h2><span class="section-num">13.</span> Organizational Structure</h2>
-
-<p>EdgeVector operates as a <strong>non-profit foundation</strong> (Edge Vector Foundation) with a for-profit subsidiary.</p>
-
-<ul>
-  <li>The <strong>foundation</strong> stewards the open-source FoldDB core, maintains the protocol specifications, and governs the ecosystem.</li>
-  <li>The <strong>subsidiary</strong> builds commercial products on top of the open-source platform: managed cloud sync, enterprise features, mobile applications, and premium support.</li>
-</ul>
-
-<p>This structure ensures that the core technology remains open and community-governed while enabling sustainable commercial development.</p>
-
-<!-- ═══════════ 14. CONCLUSION ═══════════ -->
-<h2><span class="section-num">14.</span> Conclusion</h2>
-
-<p>The current paradigm of centralized AI infrastructure forces a false trade-off between AI capability and data privacy. EdgeVector rejects this trade-off.</p>
-
-<p>By running AI knowledge infrastructure locally&nbsp;&mdash; indexing files where they already live, embedding content on the user's own hardware, and encrypting everything at rest&nbsp;&mdash; FoldDB demonstrates that AI assistants can understand a user's complete data corpus without that data ever leaving the machine.</p>
-
-<p>The technical foundations are sound: local LLMs are capable enough, NVMe storage is fast enough, and HNSW indexes are efficient enough. What has been missing is the system that ties these components together into a coherent, privacy-preserving knowledge platform.</p>
-
-<p>FoldDB is that system. EdgeVector is the architecture. The shift from centralized AI to personal AI infrastructure begins at the edge.</p>
-
-<!-- ═══════════ FOOTER ═══════════ -->
+<!-- FOOTER -->
 <div class="footer">
   Edge Vector Foundation &mdash; edgevector.org
 </div>

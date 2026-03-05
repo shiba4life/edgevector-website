@@ -4,29 +4,27 @@ import Section from '../components/Section';
 import Card from '../components/Card';
 import Label from '../components/Label';
 
-// Removed static ASCII art — using CSS-scaled text instead
-
 export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Edge Vector Foundation — Collective Computing with Privacy</title>
-        <meta name="description" content="Edge Vector Foundation is a non-profit building open infrastructure for private AI and collective computing. AI runs on your data — encrypted, local-first, cloud-resilient." />
-        <meta name="keywords" content="data sovereignty, private AI, edge computing, collective computing, FoldDB, encrypted AI, local-first, open source, vector database, privacy" />
-        <meta property="og:title" content="Edge Vector Foundation — Collective Computing with Privacy" />
-        <meta property="og:description" content="Secure compute on your data — where your data lives. Open infrastructure for private AI, collective intelligence, and data sovereignty." />
+        <title>Edge Vector Foundation — Restoring Control Over Personal Data</title>
+        <meta name="description" content="Edge Vector Foundation exists to restore individual control over personal data. We build open technology that enables secure, user-controlled computation on personal data." />
+        <meta name="keywords" content="data sovereignty, personal data, privacy, user control, encryption, data ingestion, permissioned APIs, open source, data provenance" />
+        <meta property="og:title" content="Edge Vector Foundation — Restoring Control Over Personal Data" />
+        <meta property="og:description" content="People — not corporations — should determine how their data is stored, accessed, and used. We build the open ecosystem to make that real." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://edgevector.org/" />
         <meta property="og:site_name" content="Edge Vector Foundation" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Edge Vector Foundation" />
-        <meta name="twitter:description" content="Collective computing with privacy. Your data stays encrypted — even when the network works together." />
+        <meta name="twitter:description" content="Restoring individual control over personal data through open technology." />
         <link rel="canonical" href="https://edgevector.org/" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "Edge Vector Foundation",
-          "description": "A non-profit building open infrastructure for private AI and collective computing.",
+          "description": "A non-profit building open technology to restore individual control over personal data.",
           "url": "https://edgevector.org/",
           "isPartOf": { "@type": "WebSite", "name": "Edge Vector Foundation", "url": "https://edgevector.org" }
         })}</script>
@@ -37,168 +35,157 @@ export default function Home() {
         <span className="hero-title-line">VECTOR</span>
       </div>
       <hr className="decorative-rule" aria-hidden="true" />
-      <h1 className="tagline">Secure compute on your data &mdash; where your data lives.</h1>
+      <h1 className="tagline">Restoring individual control over personal data.</h1>
       <hr className="decorative-rule" aria-hidden="true" />
       <br />
 
-      <p>The Edge Vector Foundation is a <span className="bold white">non-profit</span> advancing the infrastructure for private AI and data sovereignty.</p>
+      <p>The Edge Vector Foundation exists to ensure that <span className="bold white">people &mdash; not corporations or centralized platforms</span> &mdash; determine how their data is stored, accessed, and used.</p>
 
-      <p>We build open technology that allows AI to work across people&rsquo;s data &mdash; on their devices and in the cloud &mdash; without ever exposing the underlying information.</p>
-
-      <p><span className="bold white">AI should come to your data.</span><br />
-      Your data should never have to leave unencrypted.</p>
+      <p>We are building an <span className="bold white">open ecosystem</span> that enables secure, user-controlled computation on personal data.</p>
 
       <p>
-        <a href="#mission" className="link-btn">[Our Mission]</a>{'  '}
+        <a href="#pillars" className="link-btn">[Our Vision]</a>{'  '}
         <a href="#projects" className="link-btn">[Projects]</a>{'  '}
         <Link to="/whitepaper" className="link-btn">[Whitepaper]</Link>
       </p>
 
-      <Section variant="rose">
-        <h2><span className="bold">THE PROBLEM</span> <span className="dim">AI today requires surrendering your data</span></h2>
+      <Section variant="sage" id="pillars">
+        <h2><span className="bold">1. SEAMLESS DATA INGESTION</span></h2>
 
-        <p>Modern AI systems are powerful &mdash; but they require a dangerous trade-off.</p>
+        <p>Individuals must be able to easily bring their data into their personal data store.</p>
 
-        <p>To use them, people must upload their most sensitive information <span className="bold white">in plaintext</span> to remote servers owned by corporations.</p>
+        <div className="grid-2">
+          <Card>
+            <p><Label color="green">SELF-INGESTION</Label></p>
+            <p>Users can import documents, media, and other personal data directly from their devices. Your files become structured, queryable knowledge &mdash; under your control.</p>
+          </Card>
 
-        <p>Medical records.<br />
-        Financial documents.<br />
-        Private conversations.<br />
-        Proprietary code.<br />
-        Personal photos.</p>
-
-        <p>Once uploaded, that data leaves your control.</p>
-
-        <p><span className="bold white">This is not a necessity of AI.</span><br />
-        It is a design flaw in today&rsquo;s infrastructure.</p>
-
-        <h2 className="section-subheading"><span className="dim">Cloud AI creates three systemic risks</span></h2>
-
-        <div className="grid-3">
-          <Card><p><Label color="red">PERMANENT DATA EXPOSURE</Label></p><p>
-            Every interaction with a cloud AI system sends private data to infrastructure you do not control.</p></Card>
-
-          <Card><p><Label color="red">FRAGMENTED KNOWLEDGE</Label></p><p>
-            Your data is scattered across dozens of services. No system can understand the full picture without aggregating it in one place &mdash; in plaintext.</p></Card>
-
-          <Card><p><Label color="red">FALSE TRADE-OFF</Label></p><p>
-            Today&rsquo;s systems force a choice between powerful AI and private data.</p>
-            <p><span className="bold white">That trade-off is artificial.</span></p></Card>
-        </div>
-      </Section>
-
-      <Section variant="sage" id="mission">
-        <h2><span className="bold">OUR MISSION</span> <span className="dim">Collective computing with privacy</span></h2>
-
-        <p>The Edge Vector Foundation develops open infrastructure that enables secure AI computation &mdash; locally on your device and across the network &mdash; without exposing your underlying data.</p>
-
-        <p>Your data is <span className="bold white">always encrypted</span>. The cloud is used for resilience and networked computing &mdash; but it only ever sees ciphertext. Queries produce answers, not data transfers.</p>
-
-        <p>This architecture enables:</p>
-
-        <div className="grid-3">
-          <Card><p><Label color="green">PRIVATE AI</Label></p><p>
-            Models run locally. Cloud backups are encrypted client-side. Your plaintext data never leaves your control.</p></Card>
-
-          <Card><p><Label color="green">COLLECTIVE INTELLIGENCE</Label></p><p>
-            Query across the network &mdash; find photos others took of you, discover places your friends visited abroad &mdash; without anyone revealing their raw data or identity.</p></Card>
-
-          <Card><p><Label color="green">OPEN INFRASTRUCTURE</Label></p><p>
-            The ecosystem is open-source and interoperable &mdash; not controlled by a single vendor.</p></Card>
+          <Card>
+            <p><Label color="green">THIRD-PARTY WRITES</Label></p>
+            <p>Applications and services can write data with user permission, allowing external tools to contribute to the user&rsquo;s personal record. You decide who can add to your data store.</p>
+          </Card>
         </div>
       </Section>
 
       <Section variant="slate">
-        <h2><span className="bold">THE ARCHITECTURE</span> <span className="dim">Edge-first, cloud-resilient</span></h2>
+        <h2><span className="bold">2. PRACTICAL USE OF PERSONAL DATA</span></h2>
 
-        <p>Our work centers on a simple principle:</p>
-
-        <p><span className="bold white">Compute moves to data. Data does not move to compute.</span></p>
-
-        <p>This is achieved through three core ideas:</p>
+        <p>Ownership is meaningful only if people can actually <span className="bold white">use</span> their data.</p>
 
         <div className="grid-3">
-          <Card><p><Label color="blue">LOCAL AI EXECUTION</Label></p><p>
-            Modern models can run on consumer hardware. AI inference starts on the device you own. The cloud provides resilience, not access to your plaintext.</p></Card>
+          <Card>
+            <p><Label color="blue">APPLICATIONS ON YOUR DATA</Label></p>
+            <p>Software &mdash; from budgeting tools to health trackers to AI assistants &mdash; can operate directly on your data without requiring centralized storage.</p>
+          </Card>
 
-          <Card><p><Label color="blue">ENCRYPTED NETWORK LAYER</Label></p><p>
-            Nodes share encrypted indices and answer queries across the network. The system returns insights &mdash; never raw data. Your photos, documents, and messages stay private even when the network collaborates.</p></Card>
+          <Card>
+            <p><Label color="blue">SELECTIVE DISCLOSURE</Label></p>
+            <p>Users can reveal specific information to trusted parties &mdash; doctors, financial advisors, collaborators &mdash; without exposing everything.</p>
+          </Card>
 
-          <Card><p><Label color="blue">SOVEREIGN DATA NODES</Label></p><p>
-            Individual devices form a network of private AI systems. Each node can selectively participate in collective queries &mdash; contributing answers without exposing the underlying information.</p></Card>
+          <Card>
+            <p><Label color="blue">PERMISSIONED APIs</Label></p>
+            <p>External applications can access user data through controlled endpoints with explicit user authorization. Access is granted, not assumed.</p>
+          </Card>
         </div>
+      </Section>
 
-        <p>This creates a <span className="bold white">network of private AI systems that think together</span> &mdash; not a centralized intelligence service.</p>
+      <Section variant="rose">
+        <h2><span className="bold">3. SECURITY BY DEFAULT</span></h2>
+
+        <p>The system must protect data against unauthorized access while remaining <span className="bold white">practical to use</span>.</p>
+
+        <div className="grid-3">
+          <Card>
+            <p><Label color="red">END-TO-END ENCRYPTION</Label></p>
+            <p>Only authorized parties can read the data. Encryption is not an add-on &mdash; it is the foundation.</p>
+          </Card>
+
+          <Card>
+            <p><Label color="red">GRANULAR PERMISSIONS</Label></p>
+            <p>Users determine exactly who can access what information. Fine-grained controls, not all-or-nothing access.</p>
+          </Card>
+
+          <Card>
+            <p><Label color="red">ECONOMIC SAFEGUARDS</Label></p>
+            <p>Micropayment mechanisms with exponentially increasing costs discourage large-scale data extraction or inference attacks.</p>
+          </Card>
+        </div>
       </Section>
 
       <Section variant="amber">
-        <h2><span className="bold">WHAT THIS LOOKS LIKE</span></h2>
+        <h2><span className="bold">4. VERIFIABLE TRUSTWORTHINESS</span></h2>
 
-        <p>Collective computing with privacy means asking questions across people&rsquo;s data without anyone surrendering it.</p>
+        <p>Data systems must provide <span className="bold white">guarantees</span> about authenticity and integrity.</p>
 
-        <div className="grid-2">
+        <div className="grid-3">
           <Card>
-            <p><Label color="yellow">FIND YOUR PHOTOS</Label></p>
-            <p>&ldquo;Show me photos other people have taken of me.&rdquo;</p>
-            <p>The network queries across your friends&rsquo; photo libraries. Matches are returned to you. <span className="bold">No one else&rsquo;s photos are exposed.</span> The system finds the answer without moving the data.</p>
+            <p><Label color="yellow">SIGNED WRITES</Label></p>
+            <p>All data entries are cryptographically signed. You can verify who wrote what, and when.</p>
           </Card>
 
           <Card>
-            <p><Label color="yellow">TRAVEL INTELLIGENCE</Label></p>
-            <p>&ldquo;Which of my friends have been to Tokyo? What did they recommend?&rdquo;</p>
-            <p>The network identifies relevant experiences and surfaces recommendations. <span className="bold">Without revealing which friend, or their underlying trip data.</span> You get the insight. They keep their privacy.</p>
-          </Card>
-        </div>
-
-        <div className="grid-2">
-          <Card>
-            <p><Label color="yellow">COLLECTIVE RESEARCH</Label></p>
-            <p>&ldquo;Has anyone in my team written about this architecture pattern?&rdquo;</p>
-            <p>Query across your organization&rsquo;s knowledge base. Find relevant expertise. <span className="bold">Without centralizing everyone&rsquo;s documents on a shared server.</span></p>
+            <p><Label color="yellow">TRANSPARENT ACCESS LOGS</Label></p>
+            <p>All reads and read attempts are recorded. You always know who accessed your data.</p>
           </Card>
 
           <Card>
-            <p><Label color="yellow">PRIVATE VERIFICATION</Label></p>
-            <p>&ldquo;Can this person afford this mortgage?&rdquo;</p>
-            <p>A lender gets a signed yes/no answer from your AI mediator. <span className="bold">No bank statements, pay stubs, or tax returns ever leave your device.</span></p>
+            <p><Label color="yellow">DATA PROVENANCE</Label></p>
+            <p>Public, verifiable transforms ensure derived data can be traced to its original source and validated for correctness.</p>
           </Card>
         </div>
       </Section>
 
       <Section variant="lavender">
-        <h2><span className="bold">WHY NOW</span></h2>
+        <h2><span className="bold">5. LONG-TERM PERSONAL DATA INFRASTRUCTURE</span></h2>
 
-        <p>Three technological shifts make private collective computing possible for the first time.</p>
-
-        <div className="grid-3">
-          <Card>
-            <p><Label color="purple">LOCAL MODELS</Label></p>
-            <p>Models with billions of parameters now run on consumer laptops and desktops.</p>
-          </Card>
-
-          <Card>
-            <p><Label color="purple">COMMODITY STORAGE</Label></p>
-            <p>Multi-terabyte NVMe drives are inexpensive and fast enough to hold lifetime personal archives plus encrypted cloud replicas.</p>
-          </Card>
-
-          <Card>
-            <p><Label color="purple">EXPLODING PERSONAL DATA</Label></p>
-            <p>People generate more information than ever before. The collective value of this data is enormous &mdash; but only if it can be queried without being exposed.</p>
-          </Card>
-        </div>
-
-        <p><span className="bold white">The next generation of AI infrastructure must be private by default and collective by design.</span></p>
-      </Section>
-
-      <Section variant="sage" id="projects">
-        <h2><span className="bold">PROJECTS</span></h2>
-
-        <p>The Edge Vector Foundation develops open-source tools that enable this architecture.</p>
+        <p>A personal data system must remain viable for <span className="bold white">decades</span>.</p>
 
         <div className="grid-2">
           <Card>
-            <p><Label color="green">FOLDDB</Label></p>
-            <p>The core database. AI-native storage and querying for personal data. Runs locally with encrypted cloud backup. The foundation for private knowledge and collective queries.</p>
+            <p><Label color="purple">RESILIENCE</Label></p>
+            <p>Secure cloud backups provide redundancy while preserving user control. Your data survives hardware failures without surrendering sovereignty.</p>
+          </Card>
+
+          <Card>
+            <p><Label color="purple">ACCESSIBLE PERMISSION MANAGEMENT</Label></p>
+            <p>AI-assisted interfaces help non-technical users manage access and policies. Data sovereignty should not require a computer science degree.</p>
+          </Card>
+        </div>
+      </Section>
+
+      <Section variant="sage">
+        <h2><span className="bold">6. COLLECTIVE VALUE FROM PERSONAL DATA</span></h2>
+
+        <p>When individuals choose to participate, their data can generate <span className="bold white">shared benefits</span> without requiring centralized ownership.</p>
+
+        <div className="grid-3">
+          <Card>
+            <p><Label color="green">COMMUNAL COMPUTATION</Label></p>
+            <p>Anonymized vectorized data enables insight into collective trends while protecting individual identity.</p>
+          </Card>
+
+          <Card>
+            <p><Label color="green">INTERPERSONAL SHARING</Label></p>
+            <p>Users can share information with friends, collaborators, or communities in a controlled manner. Sharing is a choice, not a requirement.</p>
+          </Card>
+
+          <Card>
+            <p><Label color="green">DATA MARKETPLACES</Label></p>
+            <p>Individuals may choose to allow specific queries against their data and receive compensation when relevant matches are found.</p>
+          </Card>
+        </div>
+      </Section>
+
+      <Section variant="slate" id="projects">
+        <h2><span className="bold">PROJECTS</span></h2>
+
+        <p>The Edge Vector Foundation develops open-source tools that enable this vision.</p>
+
+        <div className="grid-2">
+          <Card>
+            <p><Label color="blue">FOLDDB</Label></p>
+            <p>The core database. Schema-based storage and querying for personal data. Runs locally with encrypted cloud backup. The foundation for user-controlled data infrastructure.</p>
             <p>
               <a href="https://folddb.com" target="_blank" rel="noreferrer" className="link-btn">[Website]</a>{'  '}
               <a href="https://github.com/shiba4life/fold_db" target="_blank" rel="noreferrer" className="link-btn">[GitHub]</a>
@@ -206,11 +193,8 @@ export default function Home() {
           </Card>
 
           <Card>
-            <p><Label color="green">EXEMEM</Label></p>
-            <p>Cloud-resilient infrastructure for networked FoldDB nodes. Multi-tenant architecture with user-level encryption. Enables collective computing across teams and communities while preserving individual sovereignty.</p>
-            <p>
-              <a href="https://github.com/shiba4life/exemem-infra" target="_blank" rel="noreferrer" className="link-btn">[GitHub]</a>
-            </p>
+            <p><Label color="blue">EXEMEM</Label></p>
+            <p>Cloud-resilient infrastructure for networked FoldDB nodes. Multi-tenant architecture with user-level encryption. Enables collective computation while preserving individual sovereignty.</p>
           </Card>
         </div>
 
@@ -225,7 +209,7 @@ export default function Home() {
 
           <Card>
             <p><Label color="orange">FILE_TO_JSON</Label></p>
-            <p>A universal ingestion pipeline for converting diverse file types into structured data for the FoldDB ecosystem.</p>
+            <p>A universal ingestion pipeline for converting diverse file types into structured data for seamless data ingestion.</p>
             <p>
               <a href="https://github.com/shiba4life/file_to_json" target="_blank" rel="noreferrer" className="link-btn">[GitHub]</a>
             </p>
@@ -234,17 +218,16 @@ export default function Home() {
       </Section>
 
       <div className="cta-block">
-        <p className="tagline">The Future of AI is Private and Collective.</p>
-
-        <p>The cloud centralized the internet&rsquo;s data. AI must not repeat that mistake.</p>
+        <p className="tagline">Your Data. Your Control.</p>
 
         <p>The Edge Vector Foundation exists to build the infrastructure for a world where:</p>
 
         <p>&bull; individuals control their data<br />
-        &bull; AI operates on encrypted information<br />
-        &bull; collective intelligence doesn&rsquo;t require surrendering privacy</p>
+        &bull; systems are secure by default<br />
+        &bull; trust is verifiable, not assumed<br />
+        &bull; collective value does not require centralized ownership</p>
 
-        <p><span className="bold white">AI should serve people &mdash; together &mdash; without owning their information.</span></p>
+        <p><span className="bold white">People should determine how their data is stored, accessed, and used.</span></p>
 
         <p>
           <Link to="/whitepaper" className="link-btn">[Read the Whitepaper]</Link>{'  '}

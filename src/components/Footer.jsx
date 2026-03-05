@@ -3,12 +3,11 @@ export default function Footer() {
     <footer className="site-footer">
       <p>
         <span className="bold white">edge vector foundation</span>{' '}
-        <span className="dim">Collective computing with privacy.</span>
+        <span className="dim">Restoring individual control over personal data.</span>
       </p>
       <p>
         <span className="dim">PROJECTS</span>{'  '}
         <a href="https://github.com/shiba4life/fold_db" target="_blank" rel="noreferrer">FoldDB</a>{'  '}
-        <a href="https://github.com/shiba4life/exemem-infra" target="_blank" rel="noreferrer">Exemem</a>{'  '}
         <a href="https://github.com/shiba4life/file_to_json" target="_blank" rel="noreferrer">file_to_json</a>
       </p>
       <p>
@@ -17,7 +16,7 @@ export default function Footer() {
         <a href="https://schema.folddb.com" target="_blank" rel="noreferrer">Schema Registry</a>{'  '}
         <a href="https://github.com/shiba4life/fold_db/discussions" target="_blank" rel="noreferrer">Discussions</a>
       </p>
-      <p className="dim">&copy; 2025-2026 Edge Vector Foundation &mdash; Private AI. Collective intelligence.</p>
+      <p className="dim">&copy; 2025-2026 Edge Vector Foundation &mdash; Your data. Your control.</p>
     </footer>
   );
 }

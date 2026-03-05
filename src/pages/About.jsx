@@ -8,10 +8,10 @@ export default function About() {
     <>
       <Helmet>
         <title>About — Edge Vector Foundation</title>
-        <meta name="description" content="Edge Vector Foundation is a non-profit advancing data sovereignty and collective private computing through open-source infrastructure. Learn about our mission, principles, and organizational structure." />
-        <meta name="keywords" content="Edge Vector Foundation, non-profit, data sovereignty, open source, privacy, collective computing, mission" />
+        <meta name="description" content="Edge Vector Foundation is a non-profit restoring individual control over personal data through open-source infrastructure. Learn about our mission, principles, and organizational structure." />
+        <meta name="keywords" content="Edge Vector Foundation, non-profit, data sovereignty, personal data control, open source, privacy, mission" />
         <meta property="og:title" content="About — Edge Vector Foundation" />
-        <meta property="og:description" content="A non-profit dedicated to collective computing with privacy. Open governance, community-driven, no shareholders." />
+        <meta property="og:description" content="A non-profit dedicated to ensuring people — not corporations — control their personal data." />
         <meta property="og:url" content="https://edgevector.org/about" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
@@ -22,26 +22,26 @@ export default function About() {
       <h1 className="tagline">About the Foundation</h1>
       <hr className="decorative-rule" aria-hidden="true" />
 
-      <p>Edge Vector Foundation is a <span className="bold white">non-profit organization</span> dedicated to advancing data sovereignty and collective private computing through open-source software.</p>
+      <p>Edge Vector Foundation is a <span className="bold white">non-profit organization</span> dedicated to restoring individual control over personal data.</p>
 
-      <p>We believe the current model &mdash; where people must surrender their data in plaintext to access AI &mdash; is neither inevitable nor acceptable. We build the tools that prove there&rsquo;s a better way: <span className="bold white">collective intelligence without collective exposure</span>.</p>
+      <p>We believe that people &mdash; not corporations or centralized platforms &mdash; should determine how their data is stored, accessed, and used. We build the open ecosystem that makes this possible: <span className="bold white">secure, user-controlled computation on personal data</span>.</p>
 
       <Section variant="sage">
         <h2><span className="bold">MISSION</span></h2>
 
-        <p>To ensure every person can benefit from AI &mdash; individually and collectively &mdash; without sacrificing control over their personal data. We build open-source infrastructure where data stays encrypted, the cloud provides resilience, and networks of people can compute together without seeing each other&rsquo;s raw information.</p>
+        <p>To ensure that every person controls their own data &mdash; how it is stored, who can access it, and how it is used. We build open-source infrastructure for seamless data ingestion, practical data use, security by default, verifiable trustworthiness, and long-term personal data resilience.</p>
       </Section>
 
       <Section variant="slate">
         <h2><span className="bold">PRINCIPLES</span> <span className="dim">What we stand for</span></h2>
 
         <ul className="principle-list">
-          <li><span className="bold white">Encrypted everywhere</span> &mdash; Data is encrypted at rest, in transit, and in the cloud. Keys stay on the user&rsquo;s device. The cloud stores ciphertext. Zero-knowledge by design.</li>
-          <li><span className="bold white">Collective without exposure</span> &mdash; Networks of nodes can answer queries together without revealing underlying data. You get insights from the group. The group never sees your raw information.</li>
-          <li><span className="bold white">Cloud for resilience, not surveillance</span> &mdash; The cloud provides backup, sync, and networked computing. It never sees plaintext. If the cloud is compromised, your data remains unreadable.</li>
-          <li><span className="bold white">Index, don&rsquo;t copy</span> &mdash; Build retrieval layers over existing files rather than duplicating data into yet another silo.</li>
+          <li><span className="bold white">User control is non-negotiable</span> &mdash; People decide what data to store, who can access it, and for how long. Real revocation, not permission theater.</li>
+          <li><span className="bold white">Security by default</span> &mdash; End-to-end encryption, granular permissions, and economic safeguards protect data without requiring user expertise.</li>
+          <li><span className="bold white">Verifiable, not trusted</span> &mdash; Signed writes, transparent access logs, and data provenance provide cryptographic guarantees about authenticity and integrity.</li>
+          <li><span className="bold white">Practical ownership</span> &mdash; Data control is meaningful only when people can use their data &mdash; through personal assistants, selective disclosure, and permissioned APIs.</li>
+          <li><span className="bold white">Built for decades</span> &mdash; Personal data infrastructure must be resilient, with secure cloud backups and accessible permission management for non-technical users.</li>
           <li><span className="bold white">Open by default</span> &mdash; Every tool, protocol, and schema is open source. No proprietary lock-in. No closed ecosystems.</li>
-          <li><span className="bold white">User agency</span> &mdash; People decide what to share, with whom, and for how long. Real revocation, not permission theater.</li>
         </ul>
       </Section>
 
@@ -51,7 +51,7 @@ export default function About() {
         <div className="grid-2">
           <Card>
             <p><Label color="yellow">NON-PROFIT FOUNDATION</Label></p>
-            <p>The Edge Vector Foundation governs the open-source ecosystem. We maintain FoldDB, the schema registry, and the network protocols. Our mandate is the long-term health of the private computing stack.</p>
+            <p>The Edge Vector Foundation governs the open-source ecosystem. We maintain FoldDB, the schema registry, and the network protocols. Our mandate is the long-term health of personal data infrastructure.</p>
             <p className="dim">Open governance. Community-driven. No shareholders.</p>
           </Card>
 
@@ -68,19 +68,17 @@ export default function About() {
       <Section variant="lavender">
         <h2><span className="bold">THE LONG VIEW</span> <span className="dim">Where we&rsquo;re headed</span></h2>
 
-        <p>Today, we&rsquo;re building the tools for individuals to reclaim their data. Tomorrow, we&rsquo;re building a <span className="bold white">network of sovereign AI nodes</span> that think together without exposing each other&rsquo;s information.</p>
+        <p>Today, we&rsquo;re building the tools for individuals to reclaim control over their personal data. Tomorrow, we&rsquo;re building an ecosystem where <span className="bold white">collective value emerges from personal data</span> without requiring centralized ownership.</p>
 
-        <p>Imagine asking your AI: &ldquo;Show me photos that other people took of me at the conference.&rdquo; The network finds them across your contacts&rsquo; encrypted photo libraries. You see the results. No one else&rsquo;s photos are browsed or exposed.</p>
+        <p>Imagine choosing to let anonymized insights from your data contribute to medical research &mdash; without any researcher seeing your records. Or allowing specific queries against your expertise and receiving compensation when matches are found. Or sharing travel recommendations with friends without exposing your trip details.</p>
 
-        <p>Or: &ldquo;Which of my friends have visited Barcelona? What should I see?&rdquo; The network surfaces travel insights without revealing which friend went, when, or what they did there.</p>
-
-        <p>This is <span className="bold white">collective computing with privacy</span> &mdash; the power of connected intelligence without the cost of surrendered data.</p>
+        <p>This is the vision: <span className="bold white">individual control with collective benefit</span> &mdash; personal data infrastructure that serves people, not platforms.</p>
       </Section>
 
       <Section variant="rose">
         <h2><span className="bold">GET INVOLVED</span></h2>
 
-        <p>Edge Vector Foundation is an open community. Whether you&rsquo;re a developer, researcher, privacy advocate, or someone who believes in a better model for AI &mdash; there&rsquo;s a place for you.</p>
+        <p>Edge Vector Foundation is an open community. Whether you&rsquo;re a developer, researcher, privacy advocate, or someone who believes in a better model for personal data &mdash; there&rsquo;s a place for you.</p>
 
         <p>
           <a href="https://github.com/shiba4life/fold_db" target="_blank" rel="noreferrer" className="link-btn">[Contribute on GitHub]</a>{'  '}
