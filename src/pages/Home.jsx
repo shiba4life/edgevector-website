@@ -195,6 +195,9 @@ export default function Home() {
           <Card>
             <p><Label color="blue">EXEMEM</Label></p>
             <p>Cloud-resilient infrastructure for networked FoldDB nodes. Multi-tenant architecture with user-level encryption. Enables collective computation while preserving individual sovereignty.</p>
+            <p>
+              <a href="https://exemem.com" target="_blank" rel="noreferrer" className="link-btn">[Website]</a>
+            </p>
           </Card>
         </div>
 

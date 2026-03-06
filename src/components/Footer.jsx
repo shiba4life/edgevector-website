@@ -13,8 +13,7 @@ export default function Footer() {
       <p>
         <span className="dim">LINKS</span>{'    '}
         <a href="https://folddb.com" target="_blank" rel="noreferrer">folddb.com</a>{'  '}
-        <a href="https://schema.folddb.com" target="_blank" rel="noreferrer">Schema Registry</a>{'  '}
-        <a href="https://github.com/shiba4life/fold_db/discussions" target="_blank" rel="noreferrer">Discussions</a>
+        <a href="https://exemem.com" target="_blank" rel="noreferrer">exemem.com</a>
       </p>
       <p className="dim">&copy; 2025-2026 Edge Vector Foundation &mdash; Your data. Your control.</p>
     </footer>
