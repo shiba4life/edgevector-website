@@ -24,7 +24,7 @@ const baseStyle = {
 
 const styles = {
   default: { ...baseStyle, background: '#f5f5f5', border: '2px solid #0a0a0a', color: '#0a0a0a', padding: '10px 16px' },
-  heading: { ...baseStyle, background: '#0a0a0a', border: '2px solid #0a0a0a', color: '#e8e8e8', padding: '8px 16px', letterSpacing: '2px' },
+  heading: { ...baseStyle, background: '#f5f5f5', border: '2px solid #0a0a0a', color: '#0a0a0a', padding: '8px 16px', letterSpacing: '2px' },
 };
 
 const subtext = (main, sub) => (

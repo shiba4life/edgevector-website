@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edge Vector Foundation — Personal Data Sovereignty: A Vision for Individual Control</title>
+<title>Edge Vector Foundation | Personal Data Sovereignty: A Vision for Individual Control</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   @page {
@@ -164,7 +164,7 @@
 <!-- ABSTRACT -->
 <div class="abstract">
   <p>People have lost control over their personal data. It is scattered across dozens of platforms, stored in formats they cannot access, governed by terms they did not meaningfully consent to, and exploited in ways they cannot see. The Edge Vector Foundation exists to reverse this.</p>
-  <p>This paper presents the foundation's vision for <strong>personal data sovereignty</strong>&mdash;an open ecosystem where individuals control how their data is stored, who can access it, and how it is used. We describe six requirements for making this real: seamless ingestion, practical use, security by default, verifiable trustworthiness, long-term viability, and collective value. We then describe how two open-source systems&mdash;<strong>FoldDB</strong> and <strong>Exemem</strong>&mdash;work together to meet these requirements.</p>
+  <p>This paper presents the foundation's vision for <strong>personal data sovereignty</strong>: an open ecosystem where individuals control how their data is stored, who can access it, and how it is used. We describe six requirements for making this real: seamless ingestion, practical use, security by default, verifiable trustworthiness, long-term viability, and collective value. We then describe how two open-source systems, <strong>FoldDB</strong> and <strong>Exemem</strong>, work together to meet these requirements.</p>
 </div>
 
 <!-- 1. THE PROBLEM -->
@@ -172,18 +172,18 @@
 
 <p>The contemporary digital landscape is defined by a paradox: people generate more personal data than ever before, yet they have less meaningful control over it than at any point in history.</p>
 
-<p>Personal data&mdash;medical records, financial documents, photographs, messages, work products, creative output&mdash;resides in corporate silos, locked behind proprietary APIs and incompatible formats. Users do not own their data in any practical sense. They cannot move it freely between services. They cannot control who accesses it or how it is used. They cannot verify what has been done with it.</p>
+<p>Personal data: medical records, financial documents, photographs, messages, work products, creative output. All of it resides in corporate silos, locked behind proprietary APIs and incompatible formats. Users do not own their data in any practical sense. They cannot move it freely between services. They cannot control who accesses it or how it is used. They cannot verify what has been done with it.</p>
 
-<p>This is not simply a privacy problem. It is an infrastructure problem. The tools people use every day&mdash;from email to cloud storage to social media&mdash;are built on an architecture where the service provider holds the data and the user holds nothing. When the provider changes terms, gets breached, or shuts down, the user's data goes with it.</p>
+<p>This is not simply a privacy problem. It is an infrastructure problem. The tools people use every day, from email to cloud storage to social media, are built on an architecture where the service provider holds the data and the user holds nothing. When the provider changes terms, gets breached, or shuts down, the user's data goes with it.</p>
 
-<p>Previous attempts to return data ownership to individuals&mdash;from personal data stores to self-sovereign identity systems&mdash;have struggled with a critical challenge: how to make user-controlled data actually <em>useful</em>. Owning your data in a format no application can read, behind an interface no one can use, is ownership in name only.</p>
+<p>Previous attempts to return data ownership to individuals, from personal data stores to self-sovereign identity systems, have struggled with a critical challenge: how to make user-controlled data actually <em>useful</em>. Owning your data in a format no application can read, behind an interface no one can use, is ownership in name only.</p>
 
 <p>The Edge Vector Foundation takes a different approach. Rather than asking people to choose between convenience and control, we are building infrastructure that makes control the more convenient option.</p>
 
 <!-- 2. THE VISION -->
 <h2><span class="section-num">2.</span> The Vision</h2>
 
-<p>The foundation's mission is to ensure that people&mdash;not corporations or centralized platforms&mdash;determine how their data is stored, accessed, and used.</p>
+<p>The foundation's mission is to ensure that people, not corporations or centralized platforms, determine how their data is stored, accessed, and used.</p>
 
 <p>Achieving this requires solving six problems simultaneously. A personal data system that is easy to fill but impossible to use is worthless. One that is useful but insecure is dangerous. One that is secure but cannot be trusted is theater. And one that serves only individuals, with no way to generate shared benefit, will never reach the scale needed to matter.</p>
 
@@ -207,7 +207,7 @@
 
 <h3>3.1 Self-Ingestion</h3>
 
-<p>Users must be able to import their own data&mdash;documents, photos, medical records, financial statements, emails, notes&mdash;directly from their devices. The system should accept data in whatever format it already exists and organize it automatically.</p>
+<p>Users must be able to import their own data: documents, photos, medical records, financial statements, emails, and notes. They should be able to do so directly from their devices. The system should accept data in whatever format it already exists and organize it automatically.</p>
 
 <p>FoldDB addresses this through a <strong>global schema registry</strong>: a shared catalog of data formats that every FoldDB instance uses. When new data arrives in an unfamiliar format, an AI-assisted schema generator analyzes the data, checks whether an existing schema can accommodate it, and either maps it to a known format or creates a new one. The result is that data flows in without the user needing to understand schemas, formats, or database design.</p>
 
@@ -219,7 +219,7 @@
 
 <p>The system must allow authorized third parties to write data into a person's data store with explicit permission. In FoldDB, this is governed by the same access control system that governs reads: the data owner sets a trust distance and permission policy, and only writers who meet the criteria can add data. Every third-party write is cryptographically signed by the writer, creating an auditable record of who contributed what.</p>
 
-<p>The combination of self-ingestion and permissioned third-party writes means that a person's data store becomes a single, comprehensive record of their information&mdash;regardless of where it originated.</p>
+<p>The combination of self-ingestion and permissioned third-party writes means that a person's data store becomes a single, comprehensive record of their information, regardless of where it originated.</p>
 
 <!-- 4. PRACTICAL USE -->
 <h2><span class="section-num">4.</span> Practical Use of Personal Data</h2>
@@ -228,23 +228,23 @@
 
 <h3>4.1 Applications Operating on Your Data</h3>
 
-<p>Software&mdash;including AI assistants&mdash;must be able to operate directly on a person's data without requiring that data to be uploaded to a centralized service.</p>
+<p>Software, including AI assistants, must be able to operate directly on a person's data without requiring that data to be uploaded to a centralized service.</p>
 
 <p>FoldDB makes this possible through its universal schema system. Because every FoldDB instance exposes the same schemas through the same API, an application written for one person's data works identically with every other person's data. Developers write code once; it works everywhere. This eliminates the integration tax that has historically made personal data stores impractical for application developers.</p>
 
-<p>AI assistants are one important application of this capability. A personal AI that can query your medical records, financial data, and work documents&mdash;all stored locally, all under your control&mdash;is far more useful than a cloud AI that sees only what you manually upload. But the architecture is not limited to AI. Any application&mdash;a budgeting tool, a health tracker, a project manager&mdash;can operate on the user's data through the same standardized interface.</p>
+<p>AI assistants are one important application of this capability. A personal AI that can query your medical records, financial data, and work documents, all stored locally, all under your control, is far more useful than a cloud AI that sees only what you manually upload. But the architecture is not limited to AI. Any application: a budgeting tool, a health tracker, a project manager, can operate on the user's data through the same standardized interface.</p>
 
 <h3>4.2 Selective Disclosure</h3>
 
 <p>People regularly need to share specific information with trusted parties: medical records with a doctor, financial documents with an advisor, project files with a collaborator.</p>
 
-<p>In FoldDB, data is never accessed directly. Instead, users interact through <strong>folds</strong>&mdash;named interfaces that sit in front of stored values and enforce access policies on every operation. A fold defines which fields are visible, what transformations are applied, and who may read or write. The same underlying data can have multiple folds: one that shows a doctor everything, another that shows a researcher only de-identified data, and a third that shows a lender only a yes/no creditworthiness answer.</p>
+<p>In FoldDB, data is never accessed directly. Instead, users interact through <strong>folds</strong>, named interfaces that sit in front of stored values and enforce access policies on every operation. A fold defines which fields are visible, what transformations are applied, and who may read or write. The same underlying data can have multiple folds: one that shows a doctor everything, another that shows a researcher only de-identified data, and a third that shows a lender only a yes/no creditworthiness answer.</p>
 
-<p>Folds can apply irreversible transforms&mdash;such as hashing a name into a de-identified token&mdash;so that the recipient gets the information they need without seeing the underlying sensitive data. This is selective disclosure by design, not by policy: the system structurally cannot reveal more than the fold allows.</p>
+<p>Folds can apply irreversible transforms, such as hashing a name into a de-identified token, so that the recipient gets the information they need without seeing the underlying sensitive data. This is selective disclosure by design, not by policy: the system structurally cannot reveal more than the fold allows.</p>
 
 <h3>4.3 Permissioned API Access</h3>
 
-<p>External applications must be able to access user data through controlled endpoints with explicit authorization. FoldDB exposes a uniform API across all instances, and every API call passes through the fold's policy checks. An application that the user has authorized can read and write data within the bounds of its permissions; an application without authorization gets nothing&mdash;not an error message, not a partial result, nothing.</p>
+<p>External applications must be able to access user data through controlled endpoints with explicit authorization. FoldDB exposes a uniform API across all instances, and every API call passes through the fold's policy checks. An application that the user has authorized can read and write data within the bounds of its permissions; an application without authorization gets nothing: not an error message, not a partial result, nothing.</p>
 
 <p>This creates a practical ecosystem where applications compete on the quality of their service, not on the size of their data moat. Users can switch between applications freely because their data stays in their own store.</p>
 
@@ -255,7 +255,7 @@
 
 <h3>5.1 End-to-End Encryption</h3>
 
-<p>All data at rest is encrypted. Encryption keys are held by the user, not by any service provider. When data is backed up to the cloud, the cloud stores only ciphertext&mdash;encrypted data that is unreadable without the user's key. If the cloud is compromised, the data remains unreadable.</p>
+<p>All data at rest is encrypted. Encryption keys are held by the user, not by any service provider. When data is backed up to the cloud, the cloud stores only ciphertext, encrypted data that is unreadable without the user's key. If the cloud is compromised, the data remains unreadable.</p>
 
 <p>This is not encryption as an add-on feature. It is the foundation of the architecture. The system is designed so that no one other than the user and their explicitly authorized parties can read the data, regardless of where it is stored.</p>
 
@@ -270,11 +270,11 @@
   <li><strong>Payment gates.</strong> Access can require payment, with costs that are a function of trust distance.</li>
 </ul>
 
-<p>All four checks must pass for any data access. Failure at any level produces no output&mdash;no partial results, no error messages that reveal structure. This is not a policy promise; it is a structural guarantee enforced by the system's design.</p>
+<p>All four checks must pass for any data access. Failure at any level produces no output: no partial results, no error messages that reveal structure. This is not a policy promise; it is a structural guarantee enforced by the system's design.</p>
 
 <h3>5.3 Economic Safeguards</h3>
 
-<p>One of the most novel aspects of the security model is the use of economic mechanisms to prevent large-scale data extraction. Access costs can be configured to increase exponentially with trust distance and with the volume of data accessed. This means that while a trusted doctor can access a patient's records at minimal cost, an adversary attempting to extract data across thousands of users faces costs that grow exponentially&mdash;making large-scale harvesting or inference attacks economically impractical, even when individual queries are affordable.</p>
+<p>One of the most novel aspects of the security model is the use of economic mechanisms to prevent large-scale data extraction. Access costs can be configured to increase exponentially with trust distance and with the volume of data accessed. This means that while a trusted doctor can access a patient's records at minimal cost, an adversary attempting to extract data across thousands of users faces costs that grow exponentially, making large-scale harvesting or inference attacks economically impractical, even when individual queries are affordable.</p>
 
 <p>This economic layer complements traditional access control. Even if an attacker obtains valid credentials, the cost structure makes mass extraction prohibitive.</p>
 
@@ -285,7 +285,7 @@
 
 <h3>6.1 Signed Writes</h3>
 
-<p>Every data entry&mdash;whether written by the owner, a doctor, a bank, or any other authorized party&mdash;is cryptographically signed. The signature binds the writer's identity to the data and the timestamp. This means you can verify who wrote what, and when. Tampered data is detectable. Authenticity is provable.</p>
+<p>Every data entry, whether written by the owner, a doctor, a bank, or any other authorized party, is cryptographically signed. The signature binds the writer's identity to the data and the timestamp. This means you can verify who wrote what, and when. Tampered data is detectable. Authenticity is provable.</p>
 
 <p>All data is stored in an append-only log: entries are never modified or deleted after insertion. Every previous version of every record is retained, providing a complete, auditable history that supports rollback, dispute resolution, and regulatory compliance.</p>
 
@@ -297,11 +297,11 @@
 
 <h3>6.3 Data Provenance</h3>
 
-<p>When data is transformed&mdash;for example, when a medical record is de-identified for research, or when a financial summary is derived from transaction history&mdash;the transformation is performed by a registered, vetted function from a shared catalog called the Universal Transform Registry.</p>
+<p>When data is transformed, for example when a medical record is de-identified for research or when a financial summary is derived from transaction history, the transformation is performed by a registered, vetted function from a shared catalog called the Universal Transform Registry.</p>
 
 <p>Each transform is content-addressed (identified by a hash of its definition), deterministic (same input always produces the same output), and publicly auditable. This means that derived data can be traced to its original source, the transformation that produced it can be independently verified, and the correctness of the output can be validated by anyone.</p>
 
-<p>This chain of provenance&mdash;from raw data through signed writes, through registered transforms, to derived outputs&mdash;creates a system where trust is not a matter of faith. It is a matter of verifiable cryptographic proof.</p>
+<p>This chain of provenance, from raw data through signed writes, through registered transforms, to derived outputs, creates a system where trust is not a matter of faith. It is a matter of verifiable cryptographic proof.</p>
 
 <!-- 7. LONG-TERM VIABILITY -->
 <h2><span class="section-num">7.</span> Long-Term Viability</h2>
@@ -310,9 +310,9 @@
 
 <h3>7.1 Resilience Through Encrypted Cloud Backup</h3>
 
-<p>FoldDB supports encrypted cloud backups that provide redundancy without surrendering sovereignty. The cloud stores ciphertext&mdash;encrypted data that is useless without the user's key. If a laptop is lost, the data can be restored. If a cloud provider is compromised, the data remains unreadable. The cloud provides resilience, not access.</p>
+<p>FoldDB supports encrypted cloud backups that provide redundancy without surrendering sovereignty. The cloud stores ciphertext, encrypted data that is useless without the user's key. If a laptop is lost, the data can be restored. If a cloud provider is compromised, the data remains unreadable. The cloud provides resilience, not access.</p>
 
-<p>This dual architecture&mdash;local-first operation with encrypted cloud backup&mdash;means the system works offline, survives hardware failures, and does not depend on any single provider for continuity.</p>
+<p>This dual architecture, local-first operation with encrypted cloud backup, means the system works offline, survives hardware failures, and does not depend on any single provider for continuity.</p>
 
 <h3>7.2 Accessible Permission Management</h3>
 
@@ -320,20 +320,20 @@
 
 <p>The foundation is building AI-assisted interfaces that help users manage their permissions in plain language. Instead of configuring a fold with <em>W1 R3</em> trust distance policies, a user says: "Let my doctor see my medical records, but no one else." The AI translates this into the appropriate policy configuration, explains what it means in concrete terms, and asks for confirmation.</p>
 
-<p>Data sovereignty should not require a computer science degree. The system must be as easy to manage as the corporate silos it replaces&mdash;and more transparent about what it does.</p>
+<p>Data sovereignty should not require a computer science degree. The system must be as easy to manage as the corporate silos it replaces, and more transparent about what it does.</p>
 
 <!-- 8. COLLECTIVE VALUE -->
 <h2><span class="section-num">8.</span> Collective Value from Personal Data</h2>
 
-<p>A personal data system that serves only individuals will struggle to reach the scale needed to matter. The real power of data emerges when it can be combined across people&mdash;but historically, this has required surrendering it to a central authority. The Edge Vector Foundation's architecture enables collective value without centralized ownership.</p>
+<p>A personal data system that serves only individuals will struggle to reach the scale needed to matter. The real power of data emerges when it can be combined across people. But historically, this has required surrendering it to a central authority. The Edge Vector Foundation's architecture enables collective value without centralized ownership.</p>
 
 <h3>8.1 Communal Computation on Anonymized Data</h3>
 
-<p>Exemem, the foundation's networked computation layer, enables a fundamentally new form of collective intelligence. When users choose to participate, their data is converted into vector embeddings&mdash;mathematical representations that capture the semantic meaning of the data without revealing the specific content. These embeddings are published to a shared network.</p>
+<p>Exemem, the foundation's networked computation layer, enables a fundamentally new form of collective intelligence. When users choose to participate, their data is converted into vector embeddings, mathematical representations that capture the semantic meaning of the data without revealing the specific content. These embeddings are published to a shared network.</p>
 
 <p>The critical privacy mechanism is <strong>per-entry derived pseudonyms</strong>. Every embedding is tagged with a unique, one-time public key that cannot be linked to the user's identity or to any of their other entries. An observer who sees 1,000 entries sees 1,000 unrelated pseudonyms. They cannot determine whether these belong to 1,000 people or one person. Unlike conventional pseudonymity, where a single alias is reused, this system generates a fresh identity for every data entry.</p>
 
-<p>This enables powerful collective queries. A public health researcher can ask: "How many people match this rare disease profile?" and receive an answer&mdash;47 matching entries&mdash;without learning who any of them are, whether any two belong to the same patient, or seeing any raw medical data. The embeddings power discovery; the folds protect content.</p>
+<p>This enables powerful collective queries. A public health researcher can ask: "How many people match this rare disease profile?" and receive an answer, 47 matching entries, without learning who any of them are, whether any two belong to the same patient, or seeing any raw medical data. The embeddings power discovery; the folds protect content.</p>
 
 <p>Remarkably, anonymity in this system <em>strengthens</em> as the network grows. With more users and more entries, the set of people who could plausibly own any given entry becomes larger, making deanonymization harder, not easier. This is the opposite of conventional social networks, where more data means more profiling.</p>
 
@@ -341,7 +341,7 @@
 
 <p>Users can share information with friends, collaborators, or communities in a controlled manner. Because every interaction goes through the fold system, the sharer determines exactly what the recipient sees. You can share travel recommendations without revealing your itinerary. You can share research findings without exposing your raw data. You can share a health insight without disclosing your medical records.</p>
 
-<p>Sharing is a choice, not a requirement. And unlike sharing on a social platform, the data remains in the owner's store&mdash;the recipient gets access, not a copy.</p>
+<p>Sharing is a choice, not a requirement. And unlike sharing on a social platform, the data remains in the owner's store. The recipient gets access, not a copy.</p>
 
 <h3>8.3 Data Marketplaces</h3>
 
@@ -362,7 +362,7 @@
 
 <ul>
   <li><strong>A global schema registry</strong> that ensures every instance speaks the same data language, making applications universally compatible.</li>
-  <li><strong>Folds</strong>&mdash;policy-enforcing interfaces that sit between the data and anyone who wants to access it. Folds control what is visible, apply transformations, and enforce trust distance, capabilities, security labels, and payment requirements.</li>
+  <li><strong>Folds</strong>: policy-enforcing interfaces that sit between the data and anyone who wants to access it. Folds control what is visible, apply transformations, and enforce trust distance, capabilities, security labels, and payment requirements.</li>
   <li><strong>Signed, append-only storage</strong> where every write is authenticated and every version is retained.</li>
   <li><strong>A Universal Transform Registry</strong> of vetted, deterministic data transformations that enable verifiable data provenance.</li>
   <li><strong>Encrypted cloud backup</strong> for resilience without surrendering control.</li>
@@ -376,9 +376,9 @@
 
 <ul>
   <li><strong>Public vector embeddings</strong> that enable discovery across the network without exposing raw data.</li>
-  <li><strong>Per-entry derived pseudonyms</strong> that make entries unlinkable&mdash;no two entries can be connected to the same person.</li>
+  <li><strong>Per-entry derived pseudonyms</strong> that make entries unlinkable: no two entries can be connected to the same person.</li>
   <li><strong>Similarity discovery</strong> that lets users find matching data across the entire network.</li>
-  <li><strong>Collective computation</strong>&mdash;clustering, trend analysis, anomaly detection&mdash;on the public embedding layer.</li>
+  <li><strong>Collective computation</strong>: clustering, trend analysis, and anomaly detection, on the public embedding layer.</li>
   <li><strong>A routing layer</strong> that connects discovery to access without revealing the mapping between pseudonyms and real identities.</li>
 </ul>
 
@@ -395,13 +395,13 @@
 
 <p>When these pieces come together, a new class of interactions becomes possible:</p>
 
-<p><strong>Healthcare.</strong> A patient's complete medical history lives in their personal data store. Their doctor writes to it directly. A specialist sees only the relevant records. A researcher can discover that 47 patients match a rare disease profile&mdash;without seeing any individual records or knowing who any of them are. If a patient wants to participate in a clinical trial, they reveal precisely the information needed, receive compensation, and retain control.</p>
+<p><strong>Healthcare.</strong> A patient's complete medical history lives in their personal data store. Their doctor writes to it directly. A specialist sees only the relevant records. A researcher can discover that 47 patients match a rare disease profile, without seeing any individual records or knowing who any of them are. If a patient wants to participate in a clinical trial, they reveal precisely the information needed, receive compensation, and retain control.</p>
 
-<p><strong>Finance.</strong> A person's financial records are in their data store. A lender queries whether they qualify for a mortgage and receives a signed yes/no answer&mdash;without seeing bank statements, pay stubs, or tax returns. A financial advisor sees the data they need to give advice. A tax preparer sees exactly what is required for filing, nothing more.</p>
+<p><strong>Finance.</strong> A person's financial records are in their data store. A lender queries whether they qualify for a mortgage and receives a signed yes/no answer, without seeing bank statements, pay stubs, or tax returns. A financial advisor sees the data they need to give advice. A tax preparer sees exactly what is required for filing, nothing more.</p>
 
-<p><strong>Creative work.</strong> A musician stores their compositions. The embeddings are published to the network. If someone publishes a suspiciously similar track, the musician can discover the match, verify the timestamps in the append-only log, and establish a verifiable evidence trail&mdash;all without a centralized rights management system.</p>
+<p><strong>Creative work.</strong> A musician stores their compositions. The embeddings are published to the network. If someone publishes a suspiciously similar track, the musician can discover the match, verify the timestamps in the append-only log, and establish a verifiable evidence trail, all without a centralized rights management system.</p>
 
-<p><strong>Personal life.</strong> Your photographs, messages, and memories are in your data store. You share what you choose with the people you choose. If someone else has photos of you, you can discover that fact through the network&mdash;and request access or removal&mdash;without anyone's photo library being browsed or exposed.</p>
+<p><strong>Personal life.</strong> Your photographs, messages, and memories are in your data store. You share what you choose with the people you choose. If someone else has photos of you, you can discover that fact through the network, and request access or removal, without anyone's photo library being browsed or exposed.</p>
 
 <p>In each case, the pattern is the same: the individual controls the data. Access is explicit, granular, and auditable. Collective value emerges from participation, not from surrender.</p>
 
@@ -421,13 +421,13 @@
 
 <p>The Edge Vector Foundation is building the alternative: open infrastructure where individuals control their data, where access is explicit and verifiable, where security is structural rather than contractual, and where collective value does not require centralized ownership.</p>
 
-<p>The technical foundations exist. FoldDB provides the personal data store with policy-enforcing folds, signed writes, and encrypted storage. Exemem provides the network layer with pseudonymous discovery and collective computation. Together, they form an ecosystem where data sovereignty is not a limitation but a feature&mdash;where control and utility reinforce each other rather than competing.</p>
+<p>The technical foundations exist. FoldDB provides the personal data store with policy-enforcing folds, signed writes, and encrypted storage. Exemem provides the network layer with pseudonymous discovery and collective computation. Together, they form an ecosystem where data sovereignty is not a limitation but a feature: where control and utility reinforce each other rather than competing.</p>
 
 <p>The question is not whether personal data sovereignty is technically possible. It is. The question is whether we build the infrastructure to make it the default.</p>
 
 <!-- FOOTER -->
 <div class="footer">
-  Edge Vector Foundation &mdash; edgevector.org
+  Edge Vector Foundation | edgevector.org
 </div>
 
 </body>

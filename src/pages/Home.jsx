@@ -8,11 +8,11 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Edge Vector Foundation — Restoring Control Over Personal Data</title>
+        <title>Edge Vector Foundation: Restoring Control Over Personal Data</title>
         <meta name="description" content="Edge Vector Foundation exists to restore individual control over personal data. We build open technology that enables secure, user-controlled computation on personal data." />
         <meta name="keywords" content="data sovereignty, personal data, privacy, user control, encryption, data ingestion, permissioned APIs, open source, data provenance" />
-        <meta property="og:title" content="Edge Vector Foundation — Restoring Control Over Personal Data" />
-        <meta property="og:description" content="People — not corporations — should determine how their data is stored, accessed, and used. We build the open ecosystem to make that real." />
+        <meta property="og:title" content="Edge Vector Foundation: Restoring Control Over Personal Data" />
+        <meta property="og:description" content="People, not corporations, should determine how their data is stored, accessed, and used. We build the open ecosystem to make that real." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://edgevector.org/" />
         <meta property="og:site_name" content="Edge Vector Foundation" />
@@ -39,9 +39,11 @@ export default function Home() {
       <hr className="decorative-rule" aria-hidden="true" />
       <br />
 
-      <p>The Edge Vector Foundation exists to ensure that <span className="bold white">people &mdash; not corporations or centralized platforms</span> &mdash; determine how their data is stored, accessed, and used.</p>
+      <p>A framework for restoring individual control over personal data through secure, user-controlled infrastructure and open standards.</p>
 
-      <p>We are building an <span className="bold white">open ecosystem</span> that enables secure, user-controlled computation on personal data.</p>
+      <p>Today, most personal information is stored inside platforms that determine how that data can be accessed, analyzed, or shared. The Edge Vector Foundation&rsquo;s goal is to establish an <span className="bold white">open ecosystem</span> where individuals retain authority over their own information while still enabling powerful applications, services, and research built on top of it.</p>
+
+      <p>Achieving this requires solving several core challenges: ingestion, usability, security, trust, long-term viability, and collective value.</p>
 
       <p>
         <a href="#pillars" className="link-btn">[Our Vision]</a>{'  '}
@@ -52,17 +54,15 @@ export default function Home() {
       <Section variant="sage" id="pillars">
         <h2><span className="bold">1. SEAMLESS DATA INGESTION</span></h2>
 
-        <p>Individuals must be able to easily bring their data into their personal data store.</p>
-
         <div className="grid-2">
           <Card>
             <p><Label color="green">SELF-INGESTION</Label></p>
-            <p>Users can import documents, media, and other personal data directly from their devices. Your files become structured, queryable knowledge &mdash; under your control.</p>
+            <p>Users must be able to import documents, media, and personal records directly from their devices.</p>
           </Card>
 
           <Card>
             <p><Label color="green">THIRD-PARTY WRITES</Label></p>
-            <p>Applications and services can write data with user permission, allowing external tools to contribute to the user&rsquo;s personal record. You decide who can add to your data store.</p>
+            <p>Third-party applications must be able to write data into the system with explicit user permission.</p>
           </Card>
         </div>
       </Section>
@@ -70,22 +70,20 @@ export default function Home() {
       <Section variant="slate">
         <h2><span className="bold">2. PRACTICAL USE OF PERSONAL DATA</span></h2>
 
-        <p>Ownership is meaningful only if people can actually <span className="bold white">use</span> their data.</p>
-
         <div className="grid-3">
           <Card>
             <p><Label color="blue">APPLICATIONS ON YOUR DATA</Label></p>
-            <p>Software &mdash; from budgeting tools to health trackers to AI assistants &mdash; can operate directly on your data without requiring centralized storage.</p>
+            <p>Applications and assistants should be able to operate directly on user-owned data.</p>
           </Card>
 
           <Card>
             <p><Label color="blue">SELECTIVE DISCLOSURE</Label></p>
-            <p>Users can reveal specific information to trusted parties &mdash; doctors, financial advisors, collaborators &mdash; without exposing everything.</p>
+            <p>Users must be able to selectively reveal information to trusted parties such as doctors or financial advisors.</p>
           </Card>
 
           <Card>
             <p><Label color="blue">PERMISSIONED APIs</Label></p>
-            <p>External applications can access user data through controlled endpoints with explicit user authorization. Access is granted, not assumed.</p>
+            <p>External applications should be able to access data through permissioned APIs controlled by the user.</p>
           </Card>
         </div>
       </Section>
@@ -93,22 +91,20 @@ export default function Home() {
       <Section variant="rose">
         <h2><span className="bold">3. SECURITY BY DEFAULT</span></h2>
 
-        <p>The system must protect data against unauthorized access while remaining <span className="bold white">practical to use</span>.</p>
-
         <div className="grid-3">
           <Card>
             <p><Label color="red">END-TO-END ENCRYPTION</Label></p>
-            <p>Only authorized parties can read the data. Encryption is not an add-on &mdash; it is the foundation.</p>
+            <p>All data should be protected by end-to-end encryption.</p>
           </Card>
 
           <Card>
             <p><Label color="red">GRANULAR PERMISSIONS</Label></p>
-            <p>Users determine exactly who can access what information. Fine-grained controls, not all-or-nothing access.</p>
+            <p>Fine-grained permission systems must allow users to control exactly who can access specific information.</p>
           </Card>
 
           <Card>
             <p><Label color="red">ECONOMIC SAFEGUARDS</Label></p>
-            <p>Micropayment mechanisms with exponentially increasing costs discourage large-scale data extraction or inference attacks.</p>
+            <p>Economic safeguards such as micropayments with escalating costs discourage large-scale data extraction.</p>
           </Card>
         </div>
       </Section>
@@ -116,22 +112,20 @@ export default function Home() {
       <Section variant="amber">
         <h2><span className="bold">4. VERIFIABLE TRUSTWORTHINESS</span></h2>
 
-        <p>Data systems must provide <span className="bold white">guarantees</span> about authenticity and integrity.</p>
-
         <div className="grid-3">
           <Card>
             <p><Label color="yellow">SIGNED WRITES</Label></p>
-            <p>All data entries are cryptographically signed. You can verify who wrote what, and when.</p>
+            <p>All writes should be cryptographically signed.</p>
           </Card>
 
           <Card>
             <p><Label color="yellow">TRANSPARENT ACCESS LOGS</Label></p>
-            <p>All reads and read attempts are recorded. You always know who accessed your data.</p>
+            <p>Reads and read attempts must be logged transparently.</p>
           </Card>
 
           <Card>
             <p><Label color="yellow">DATA PROVENANCE</Label></p>
-            <p>Public, verifiable transforms ensure derived data can be traced to its original source and validated for correctness.</p>
+            <p>Data provenance mechanisms ensure that derived information can be traced to its source.</p>
           </Card>
         </div>
       </Section>
@@ -139,17 +133,15 @@ export default function Home() {
       <Section variant="lavender">
         <h2><span className="bold">5. LONG-TERM PERSONAL DATA INFRASTRUCTURE</span></h2>
 
-        <p>A personal data system must remain viable for <span className="bold white">decades</span>.</p>
-
         <div className="grid-2">
           <Card>
             <p><Label color="purple">RESILIENCE</Label></p>
-            <p>Secure cloud backups provide redundancy while preserving user control. Your data survives hardware failures without surrendering sovereignty.</p>
+            <p>Secure cloud backups provide resilience without sacrificing user ownership.</p>
           </Card>
 
           <Card>
-            <p><Label color="purple">ACCESSIBLE PERMISSION MANAGEMENT</Label></p>
-            <p>AI-assisted interfaces help non-technical users manage access and policies. Data sovereignty should not require a computer science degree.</p>
+            <p><Label color="purple">ACCESSIBLE MANAGEMENT</Label></p>
+            <p>Permission management should remain usable for non-technical users through intelligent assistance.</p>
           </Card>
         </div>
       </Section>
@@ -157,22 +149,20 @@ export default function Home() {
       <Section variant="sage">
         <h2><span className="bold">6. COLLECTIVE VALUE FROM PERSONAL DATA</span></h2>
 
-        <p>When individuals choose to participate, their data can generate <span className="bold white">shared benefits</span> without requiring centralized ownership.</p>
-
         <div className="grid-3">
           <Card>
             <p><Label color="green">COMMUNAL COMPUTATION</Label></p>
-            <p>Anonymized vectorized data enables insight into collective trends while protecting individual identity.</p>
+            <p>Anonymized vectorized datasets can enable insights into collective trends.</p>
           </Card>
 
           <Card>
             <p><Label color="green">INTERPERSONAL SHARING</Label></p>
-            <p>Users can share information with friends, collaborators, or communities in a controlled manner. Sharing is a choice, not a requirement.</p>
+            <p>Individuals may share data with friends, collaborators, or communities.</p>
           </Card>
 
           <Card>
             <p><Label color="green">DATA MARKETPLACES</Label></p>
-            <p>Individuals may choose to allow specific queries against their data and receive compensation when relevant matches are found.</p>
+            <p>Users may optionally allow specific queries against their data and receive compensation.</p>
           </Card>
         </div>
       </Section>
@@ -203,7 +193,7 @@ export default function Home() {
             <p><Label color="orange">SCHEMA REGISTRY</Label></p>
             <p>A shared vocabulary for data schemas that enables interoperability across nodes without centralizing data.</p>
             <p>
-              <a href="https://schema.folddb.com" target="_blank" rel="noreferrer" className="link-btn">[Registry]</a>
+              <a href="https://exemem.com" target="_blank" rel="noreferrer" className="link-btn">[Website]</a>
             </p>
           </Card>
 
@@ -220,14 +210,7 @@ export default function Home() {
       <div className="cta-block">
         <p className="tagline">Your Data. Your Control.</p>
 
-        <p>The Edge Vector Foundation exists to build the infrastructure for a world where:</p>
-
-        <p>&bull; individuals control their data<br />
-        &bull; systems are secure by default<br />
-        &bull; trust is verifiable, not assumed<br />
-        &bull; collective value does not require centralized ownership</p>
-
-        <p><span className="bold white">People should determine how their data is stored, accessed, and used.</span></p>
+        <p>The long-term objective of the Edge Vector Foundation is to establish a durable personal data infrastructure: a system where individuals permanently own their information, determine how it is used, and benefit from the value it creates.</p>
 
         <p>
           <Link to="/whitepaper" className="link-btn">[Read the Whitepaper]</Link>{'  '}

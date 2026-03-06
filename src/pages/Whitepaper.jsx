@@ -8,15 +8,15 @@ export default function Whitepaper() {
   return (
     <>
       <Helmet>
-        <title>Whitepaper — Edge Vector Foundation</title>
+        <title>Whitepaper | Edge Vector Foundation</title>
         <meta name="description" content="Personal Data Sovereignty: A Vision for Individual Control. The Edge Vector Foundation whitepaper on user-controlled data storage, permissioned access, verifiable trustworthiness, and collective value." />
         <meta name="keywords" content="Edge Vector whitepaper, data sovereignty, personal data, FoldDB, Exemem, encryption, permissioned access, data provenance, collective computation" />
-        <meta property="og:title" content="Whitepaper — Personal Data Sovereignty" />
+        <meta property="og:title" content="Whitepaper | Personal Data Sovereignty" />
         <meta property="og:description" content="A vision for individual control over personal data. Covers seamless ingestion, practical use, security, verifiable trust, long-term viability, and collective value." />
         <meta property="og:url" content="https://edgevector.org/whitepaper" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Edge Vector Whitepaper — Personal Data Sovereignty" />
+        <meta name="twitter:title" content="Edge Vector Whitepaper | Personal Data Sovereignty" />
         <link rel="canonical" href="https://edgevector.org/whitepaper" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -41,9 +41,9 @@ export default function Whitepaper() {
       <Section variant="slate">
         <h2><span className="bold">ABSTRACT</span></h2>
 
-        <p>People have lost control over their personal data. It is scattered across dozens of platforms, stored in formats they cannot access, governed by terms they did not meaningfully consent to, and exploited in ways they cannot see. This is not a technology problem &mdash; it is an infrastructure problem.</p>
+        <p>People have lost control over their personal data. It is scattered across dozens of platforms, stored in formats they cannot access, governed by terms they did not meaningfully consent to, and exploited in ways they cannot see. This is not a technology problem. It is an infrastructure problem.</p>
 
-        <p>This paper presents the Edge Vector Foundation&rsquo;s vision for <span className="bold white">personal data sovereignty</span> &mdash; an open ecosystem where individuals control how their data is stored, who can access it, and how it is used. We describe six requirements for making this real and how two open-source systems &mdash; <span className="bold">FoldDB</span> and <span className="bold">Exemem</span> &mdash; work together to meet them.</p>
+        <p>This paper presents the Edge Vector Foundation&rsquo;s vision for <span className="bold white">personal data sovereignty</span>: an open ecosystem where individuals control how their data is stored, who can access it, and how it is used. We describe six requirements for making this real and how two open-source systems, <span className="bold">FoldDB</span> and <span className="bold">Exemem</span>, work together to meet them.</p>
       </Section>
 
       <Section variant="rose">
