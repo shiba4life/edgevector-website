@@ -41,14 +41,15 @@ export default function Home() {
 
       <p>The Edge Vector Foundation exists to ensure that <span className="bold white">people &mdash; not corporations or centralized platforms</span> &mdash; determine how their data is stored, accessed, and used.</p>
 
-      <p>We are building an <span className="bold white">open ecosystem</span> that enables secure, user-controlled computation on personal data.</p>
+      <p>We are building an <span className="bold white">open ecosystem</span> that enables secure computation on personal data while enabling anonymized data discovery and user-directed sharing.</p>
 
       <p>
-        <a href="#pillars" className="link-btn">[Our Vision]</a>{'  '}
+        <a href="#pillars" className="link-btn">[Our goals]</a>{'  '}
         <a href="#projects" className="link-btn">[Projects]</a>{'  '}
         <Link to="/whitepaper" className="link-btn">[Whitepaper]</Link>
       </p>
 
+      <h1>Our goals</h1>
       <Section variant="sage" id="pillars">
         <h2><span className="bold">1. SEAMLESS DATA INGESTION</span></h2>
 
