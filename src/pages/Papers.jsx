@@ -48,12 +48,6 @@ const PAPERS = [
         description: 'A system for discovering private data without exposing it, using semantic atomization and anonymized vector fragments that enable search while preserving privacy.',
         pdf: '/papers/pseudonymous_vectorized_discovery.pdf',
       },
-      {
-        title: 'AI-Powered Schema Inference for Automatic Data Ingestion',
-        authors: 'Tom Tang',
-        description: 'A multi-tier AI pipeline that converts arbitrary files to structured data, infers schemas from a global registry, and generates typed database mutations.',
-        pdf: '/papers/ai_schema_inference.pdf',
-      },
     ],
   },
 ];
