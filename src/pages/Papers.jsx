@@ -44,7 +44,7 @@ const PAPERS = [
     items: [
       {
         title: 'Anonymized Vector Discovery Through Semantic Atomization',
-        authors: 'Tom Tang',
+        authors: 'Tom Tang, Fei Jia',
         description: 'A system for discovering private data without exposing it, using semantic atomization and anonymized vector fragments that enable search while preserving privacy.',
         pdf: '/papers/pseudonymous_vectorized_discovery.pdf',
       },
