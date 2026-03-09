@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Section from '../components/Section';
 import Card from '../components/Card';
@@ -8,7 +9,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About — Edge Vector Foundation</title>
-        <meta name="description" content="Edge Vector Foundation is a non-profit restoring individual control over personal data through open-source infrastructure. Learn about our mission, principles, and organizational structure." />
+        <meta name="description" content="Edge Vector Foundation is a non-profit building a path toward individual data ownership through open-source infrastructure. Learn about our mission, principles, and organizational structure." />
         <meta name="keywords" content="Edge Vector Foundation, non-profit, data sovereignty, personal data control, open source, privacy, mission" />
         <meta property="og:title" content="About — Edge Vector Foundation" />
         <meta property="og:description" content="A non-profit dedicated to ensuring people — not corporations — control their personal data." />
@@ -22,7 +23,7 @@ export default function About() {
       <h1 className="tagline">About the Foundation</h1>
       <hr className="decorative-rule" aria-hidden="true" />
 
-      <p>Edge Vector Foundation is a <span className="bold white">non-profit organization</span> dedicated to restoring individual control over personal data.</p>
+      <p>Edge Vector Foundation is a <span className="bold white">non-profit organization</span> building a path toward individual data ownership.</p>
 
       <p>We believe that people &mdash; not corporations or centralized platforms &mdash; should determine how their data is stored, accessed, and used. We build the open ecosystem that makes this possible: <span className="bold white">secure, user-controlled computation on personal data</span>.</p>
 
@@ -83,7 +84,9 @@ export default function About() {
         <p>
           <a href="https://github.com/shiba4life/fold_db" target="_blank" rel="noreferrer" className="link-btn">[Contribute on GitHub]</a>{'  '}
           <a href="https://github.com/shiba4life/fold_db/discussions" target="_blank" rel="noreferrer" className="link-btn">[Join the Discussion]</a>{'  '}
-          <a href="https://github.com/shiba4life/fold_db/issues" target="_blank" rel="noreferrer" className="link-btn">[Report Issues]</a>
+          <a href="https://github.com/shiba4life/fold_db/issues" target="_blank" rel="noreferrer" className="link-btn">[Report Issues]</a>{'  '}
+          <Link to="/technology" className="link-btn">[Technology]</Link>{'  '}
+          <Link to="/papers" className="link-btn">[Papers]</Link>
         </p>
       </Section>
     </>

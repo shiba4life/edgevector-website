@@ -7,7 +7,7 @@ import Home from './pages/Home';
 
 const About = lazy(() => import('./pages/About'));
 const Technology = lazy(() => import('./pages/Technology'));
-const Whitepaper = lazy(() => import('./pages/Whitepaper'));
+const Papers = lazy(() => import('./pages/Papers'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 export default function App() {
@@ -21,7 +21,7 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/technology" element={<Technology />} />
-              <Route path="/whitepaper" element={<Whitepaper />} />
+              <Route path="/papers" element={<Papers />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

@@ -133,28 +133,10 @@ export default function Technology() {
         </div>
       </Section>
 
-      <Section variant="slate">
-        <h2><span className="bold">PERFORMANCE</span> <span className="dim">Built for real-world scale</span></h2>
-
-        <pre>{`
-  METRIC                          TARGET
-  ─────────────────────────────────────────
-  Installation time               < 2 minutes
-  Initial indexing speed           > 200,000 files/hr
-  Incremental scan (500K files)   < 10 seconds
-  Semantic query latency          < 500ms
-  Keyword query latency           < 100ms
-  Memory usage (idle)             < 200 MB
-  Disk overhead                   ~20% of source files
-`}</pre>
-
-        <p>These targets are designed for consumer hardware &mdash; laptops and desktops, not servers. Personal data infrastructure should run on what you already own.</p>
-      </Section>
-
       <div className="cta-block">
         <p>Want the full technical details?</p>
         <p>
-          <Link to="/whitepaper" className="link-btn">[Read the Whitepaper]</Link>{'  '}
+          <Link to="/papers" className="link-btn">[Read the Papers]</Link>{'  '}
           <a href="https://github.com/shiba4life/fold_db" target="_blank" rel="noreferrer" className="link-btn">[View the Source]</a>
         </p>
       </div>
