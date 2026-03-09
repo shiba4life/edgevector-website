@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="site-footer">
       <p>
         <span className="bold white">edge vector foundation</span>{' '}
-        <span className="dim">Restoring individual control over personal data.</span>
+        <span className="dim">Building a path toward individual data ownership.</span>
       </p>
       <p>
         <span className="dim">PROJECTS</span>{'  '}
