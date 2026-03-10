@@ -22,6 +22,13 @@ const PAPERS = [
     color: 'red',
     items: [
       {
+        title: 'EdgeVector Architecture Overview',
+        authors: 'Edge Vector Foundation',
+        description: 'End-to-end architecture: user-controlled FoldDB nodes, schema-enforced access control (folds), e2e encrypted relay via Exemem, passkey-based key derivation, and multi-node availability.',
+        link: '/whitepaper',
+        linkLabel: 'Read',
+      },
+      {
         title: 'Fold DB: Compute Without Exposure',
         authors: 'Tom Tang',
         description: 'Formalizes the fold abstraction: policy-enforcing interfaces over stored data with composable, multi-layer access control and a data-minimality proof.',
@@ -76,14 +83,18 @@ export default function Papers() {
           <h2><span className="bold">{section.category.toUpperCase()}</span></h2>
           <div className="papers-list">
             {section.items.map((paper) => (
-              <Card key={paper.pdf}>
+              <Card key={paper.pdf || paper.link}>
                 <p><Label color={section.color}>{paper.authors}</Label></p>
                 <h3 className="paper-title">
-                  <a href={paper.pdf} target="_blank" rel="noreferrer">{paper.title}</a>
+                  {paper.link
+                    ? <Link to={paper.link}>{paper.title}</Link>
+                    : <a href={paper.pdf} target="_blank" rel="noreferrer">{paper.title}</a>
+                  }
                 </h3>
                 <p>{paper.description}</p>
                 <p>
-                  <a href={paper.pdf} target="_blank" rel="noreferrer" className="link-btn">[PDF]</a>
+                  {paper.link && <Link to={paper.link} className="link-btn">[{paper.linkLabel || 'Read'}]</Link>}
+                  {paper.pdf && <a href={paper.pdf} target="_blank" rel="noreferrer" className="link-btn">[PDF]</a>}
                   {paper.simplified && paper.simplified.map((s) => (
                     <span key={s.pdf}>
                       {'  '}

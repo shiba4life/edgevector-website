@@ -100,6 +100,7 @@ a:hover { color: #cc0000; border-bottom-color: #cc0000; }
   margin: 2px 4px 2px 0;
 }
 .link-btn:hover { background: #0a0a0a; color: #e8e8e8; border-bottom: 2px solid #0a0a0a; }
+.link-btn-active { background: #0a0a0a; color: #e8e8e8; }
 
 /* decorative rules — heavy */
 .decorative-rule {
@@ -258,6 +259,22 @@ a:hover { color: #cc0000; border-bottom-color: #cc0000; }
   text-transform: uppercase;
   color: #999;
 }
+
+/* markdown body — styles for rendered .md files */
+.markdown-body h1 { font-size: 1.8em; font-weight: 700; margin: 1em 0 0.5em; letter-spacing: -0.5px; }
+.markdown-body h2 { font-size: 1.3em; margin: 1.5em 0 0.5em; border-bottom: 2px solid #ccc; padding-bottom: 0.3em; }
+.markdown-body h3 { font-size: 1.05em; margin: 1.2em 0 0.4em; text-transform: none; letter-spacing: 0; }
+.markdown-body ul, .markdown-body ol { padding-left: 1.5em; margin: 0.5em 0; }
+.markdown-body li { margin: 0.3em 0; }
+.markdown-body pre { background: #e0e0e0; padding: 12px; margin: 0.8em 0; border: 2px solid #999; overflow-x: auto; }
+.markdown-body code { font-family: inherit; font-size: 0.95em; }
+.markdown-body p code { background: #e0e0e0; padding: 1px 5px; border: 1px solid #ccc; }
+.markdown-body blockquote { border-left: 3px solid #999; padding-left: 1em; color: #555; margin: 0.8em 0; }
+.markdown-body table { border-collapse: collapse; margin: 1em 0; width: 100%; }
+.markdown-body th, .markdown-body td { border: 1px solid #999; padding: 6px 10px; text-align: left; font-size: 0.9em; }
+.markdown-body th { font-weight: 700; background: #e0e0e0; }
+.markdown-body hr { border: none; border-top: 2px solid #ccc; margin: 2em 0; }
+.markdown-body strong { font-weight: 700; }
 
 /* responsive */
 @media (max-width: 900px) {

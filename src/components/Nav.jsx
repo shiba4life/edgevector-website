@@ -27,8 +27,8 @@ export default function Nav() {
         {menuOpen ? '\u2715' : '\u2630'}
       </button>
       <div className={`nav-links${menuOpen ? ' open' : ''}`}>
-        {NAV_LINKS.filter(link => link.to !== pathname).map(link => (
-          <Link key={link.to} to={link.to} className="link-btn" onClick={() => setMenuOpen(false)}>[{link.label}]</Link>
+        {NAV_LINKS.map(link => (
+          <Link key={link.to} to={link.to} className={`link-btn${link.to === pathname ? ' link-btn-active' : ''}`} onClick={() => setMenuOpen(false)}>[{link.label}]</Link>
         ))}
         <a href="https://github.com/shiba4life/fold_db" target="_blank" rel="noreferrer" className="link-btn">[GitHub]</a>
       </div>
