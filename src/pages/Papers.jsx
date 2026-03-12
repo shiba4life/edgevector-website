@@ -43,6 +43,12 @@ const PAPERS = [
         description: 'How user schemas converge over time through WASM-based views, a content-addressed view registry, bidirectional consistency, and micropayment incentives.',
         pdf: '/papers/schema_convergence_views.pdf',
       },
+      {
+        title: 'Preventing Data Structure Fragmentation Through Canonical Schema and Field Resolution',
+        authors: 'Tom Tang, Fei Jia',
+        description: 'Two-tier canonicalization using vector embeddings to resolve schema-level and field-level fragmentation, with zero-migration schema expansion via field mappers to deprecated schemas.',
+        pdf: '/papers/canonical_fields_via_embeddings.pdf',
+      },
     ],
   },
   {
