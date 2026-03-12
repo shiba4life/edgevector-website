@@ -48,6 +48,9 @@ const PAPERS = [
         authors: 'Tom Tang, Fei Jia',
         description: 'Two-tier canonicalization using vector embeddings to resolve schema-level and field-level fragmentation, with zero-migration schema expansion via field mappers to deprecated schemas.',
         pdf: '/papers/canonical_fields_via_embeddings.pdf',
+        simplified: [
+          { label: 'ELI5 Version', pdf: '/papers/canonical_fields_via_embeddings_eli5.pdf' },
+        ],
       },
     ],
   },
