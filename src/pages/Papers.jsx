@@ -55,6 +55,12 @@ const PAPERS = [
           { label: 'ELI5 Version', pdf: '/papers/canonical_fields_via_embeddings_eli5.pdf' },
         ],
       },
+      {
+        title: 'Verifiable Classification Downgrading Through Information-Destroying Transforms',
+        authors: 'Tom Tang, Fei Jia',
+        description: 'A formal mechanism for controlled downgrading of data classification levels through publicly visible, automatically verified statistical aggregation transforms. Unverifiable information loss does not get downgraded.',
+        pdf: '/papers/classification_downgrading.pdf',
+      },
     ],
   },
   {
