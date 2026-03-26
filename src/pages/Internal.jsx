@@ -21,7 +21,7 @@ const TABS = [
   {
     id: 'video',
     label: 'Explainer Video',
-    video: '/videos/FoldDB_Overview_V4_with_audio.mp4',
+    video: '/videos/FoldDB_Overview_V6_with_audio.mp4',
   },
 ];
 
