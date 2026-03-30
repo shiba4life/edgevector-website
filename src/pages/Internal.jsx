@@ -19,6 +19,32 @@ const TABS = [
     ],
   },
   {
+    id: 'formation',
+    label: 'Formation',
+    docs: [
+      '/docs/corporate/nonprofit_edge_vector_foundation.md',
+      '/docs/corporate/filing_checklist.md',
+    ],
+  },
+  {
+    id: 'formation-docs',
+    label: 'Formation Docs',
+    docs: [
+      '/docs/corporate/articles_of_incorporation.md',
+      '/docs/corporate/bylaws.md',
+      '/docs/corporate/conflict_of_interest_policy.md',
+    ],
+  },
+  {
+    id: 'patents',
+    label: 'Patents',
+    docs: [
+      '/docs/corporate/patent_compute_without_exposure.md',
+      '/docs/corporate/patent_vectorized_discovery.md',
+      '/docs/corporate/patent_schema_canonical_service.md',
+    ],
+  },
+  {
     id: 'video',
     label: 'Explainer Video',
     video: '/videos/FoldDB_Overview_V7_with_audio.mp4',

@@ -4,7 +4,7 @@
 
 - **Entity type:** 501(c)(3) Public Charity
 - **State of incorporation:** Washington
-- **Purpose:** Open-source database technology research and development
+- **Purpose:** Open-source database technology research and development (charitable and scientific)
 
 ---
 
@@ -27,16 +27,14 @@ Name: Tom Tang
 Address: 2328 Delmar Dr E, Seattle, WA 98102
 
 ARTICLE III — PURPOSE
-This corporation is organized and operated exclusively for charitable, scientific,
-and educational purposes within the meaning of Section 501(c)(3) of the Internal
+This corporation is organized and operated exclusively for charitable and
+scientific purposes within the meaning of Section 501(c)(3) of the Internal
 Revenue Code of 1986, as amended, including but not limited to:
 
 (a) Developing, maintaining, and distributing open-source database software
     and related technologies for the public benefit;
 (b) Conducting and publishing research in privacy-preserving data systems,
-    distributed databases, and cryptographic access control;
-(c) Educating the public on data sovereignty, privacy-preserving technology,
-    and open-source software development.
+    distributed databases, and cryptographic access control.
 
 ARTICLE IV — NONPROFIT STATUS
 This corporation does not contemplate pecuniary gain or profit to the members
@@ -69,14 +67,15 @@ Tom Tang
 2328 Delmar Dr E, Seattle, WA 98102
 
 ARTICLE IX — DIRECTORS
-The number of directors constituting the initial board of directors is [3].
+The number of directors constituting the initial board of directors is three (3).
 The names and addresses of the initial directors are:
 1. Tom Tang — 2328 Delmar Dr E, Seattle, WA 98102
 2. Fei Jia — 7437 NE 197th Pl, Kenmore, WA 98028
-3. [Third Director] — [Address]
+3. Cedric Hurst — 22 N Morgan St, Apt 207, Chicago IL 60607
 ```
 
 **Notes:**
+
 - IRS requires at least the Purpose clause (Article III), Dissolution clause (Article V), and Lobbying restriction (Article VI) to grant 501(c)(3) status
 - Washington filing fee: $30 (online at sos.wa.gov/corps)
 - In Washington, you can be your own registered agent (must be a WA resident with a physical address, no PO boxes)
@@ -100,7 +99,7 @@ managed by the Board of Directors.
 Section 2.2. Number. The Board shall consist of no fewer than three (3) and
 no more than nine (9) directors.
 
-Section 2.3. Term. Each director shall serve a term of two (2) years.
+Section 2.3. Term. Each director shall serve a term of one (1) year.
 Directors may serve unlimited consecutive terms.
 
 Section 2.4. Election. Directors shall be elected by a majority vote of
@@ -218,10 +217,12 @@ have received, read, and understand this policy and have complied with it.
 **Filed with:** IRS (online at pay.gov)
 
 **Eligibility for 1023-EZ (short form) vs. 1023 (long form):**
-- 1023-EZ if: projected annual gross receipts ≤ $50,000 for next 3 years AND total assets ≤ $250,000
+
+- 1023-EZ if: projected annual gross receipts <= $50,000 for next 3 years AND total assets <= $250,000
 - Otherwise must file full Form 1023
 
 **Key information needed:**
+
 - EIN (get this first — see below)
 - Articles of Incorporation (filed and stamped)
 - Description of activities
@@ -237,6 +238,7 @@ have received, read, and understand this policy and have complied with it.
 **Filed with:** IRS (online at irs.gov/businesses — instant, free)
 
 **Information needed:**
+
 - Legal name: Edge Vector Foundation
 - Type: Non-profit corporation
 - State of incorporation
@@ -257,7 +259,7 @@ EDGE VECTOR FOUNDATION
 
 Date: [Date]
 Location: [Location or "Via video conference"]
-Present: Tom Tang, Fei Jia, [Third Director]
+Present: Tom Tang, Fei Jia, Cedric Hurst
 
 1. CALL TO ORDER
    Tom Tang called the meeting to order at [time].
@@ -273,8 +275,8 @@ Present: Tom Tang, Fei Jia, [Third Director]
 4. ELECTION OF OFFICERS
    Upon motion duly made and seconded, the following officers were elected:
    - President: Tom Tang
-   - Secretary: Fei Jia
-   - Treasurer: [Name]
+   - Treasurer: Fei Jia
+   - Secretary: Cedric Hurst
 
 5. ADOPTION OF CONFLICT OF INTEREST POLICY
    Upon motion duly made and seconded, the Board unanimously adopted the
@@ -299,8 +301,42 @@ Present: Tom Tang, Fei Jia, [Third Director]
     There being no further business, the meeting was adjourned at [time].
 
 _________________________
-[Name], Secretary
+Cedric Hurst, Secretary
 ```
+
+---
+
+## 7. WA Initial Report (Due within 120 days of incorporation)
+
+**Filed with:** Washington Secretary of State (online)
+**Fee:** $10
+
+**Information needed:**
+
+- Corporation name and UBI number (assigned at incorporation)
+- Principal office address and email
+- Names and addresses of all directors and officers
+- Nature of business: "Nonprofit — open-source software research and development"
+
+**Important:** Failure to file within 120 days can result in administrative dissolution.
+
+---
+
+## 8. WA Charity Registration (Before soliciting donations)
+
+**Filed with:** Washington Secretary of State, Charities Program
+**Fee:** $20 initial registration
+
+**Required if:** The Foundation will solicit donations from the public in Washington state.
+
+**Information needed:**
+
+- Corporation name, EIN, address
+- Names and addresses of officers and directors
+- Description of charitable purpose
+- Financial information (will be minimal for first year)
+
+**Ongoing:** Annual financial reports must be filed with the Charities Division.
 
 ---
 
@@ -311,12 +347,17 @@ _________________________
 - [ ] Adopt Conflict of Interest Policy
 - [ ] Hold organizational meeting and record minutes
 - [ ] Apply for EIN (free, instant, irs.gov)
+- [ ] File WA Initial Report within 120 days ($10)
 - [ ] Open bank account
 - [ ] File Form 1023-EZ ($275) or 1023 ($600) with IRS
-- [ ] Register with Washington Secretary of State Charities Program (required for soliciting donations in WA)
-- [ ] File for Washington state tax exemption (Department of Revenue)
+- [ ] Register with WA Charities Program ($20, required before soliciting donations)
+- [ ] Register with WA Department of Revenue (B&O tax account, free)
 
-**Estimated total cost:** ~$305-630 (filing fees only, no attorney)
+**Estimated total cost:** ~$335-660 (filing fees only, no attorney)
+
 - WA Articles of Incorporation: $30
+- WA Initial Report: $10
+- WA Charity Registration: $20
 - IRS Form 1023-EZ: $275 (or $600 for full 1023)
-**Estimated timeline:** 1-2 weeks for WA incorporation, 1-6 months for IRS 501(c)(3) determination
+
+**Estimated timeline:** 1-2 weeks for WA incorporation, 2-4 weeks for 1023-EZ determination (3-6 months for full 1023)

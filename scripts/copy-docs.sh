@@ -29,6 +29,13 @@ cp "$WORKSPACE/docs/design/THIRD_PARTY_APP_AUTHORIZATION.md" "$DEST/design/"
 
 # Corporate
 cp "$WORKSPACE/docs/corporate/nonprofit_edge_vector_foundation.md" "$DEST/corporate/"
+cp "$WORKSPACE/docs/corporate/filing_checklist.md" "$DEST/corporate/"
+cp "$WORKSPACE/docs/corporate/articles_of_incorporation.md" "$DEST/corporate/"
+cp "$WORKSPACE/docs/corporate/bylaws.md" "$DEST/corporate/"
+cp "$WORKSPACE/docs/corporate/conflict_of_interest_policy.md" "$DEST/corporate/"
+cp "$WORKSPACE/docs/corporate/patent_compute_without_exposure.md" "$DEST/corporate/"
+cp "$WORKSPACE/docs/corporate/patent_vectorized_discovery.md" "$DEST/corporate/"
+cp "$WORKSPACE/docs/corporate/patent_schema_canonical_service.md" "$DEST/corporate/"
 
 # Progress
 cp "$WORKSPACE/docs/progress/roadmap.md" "$DEST/progress/"
