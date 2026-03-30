@@ -78,7 +78,7 @@ export default function Home() {
             <p>The core database. Schema-based storage and querying for personal data. Runs locally with encrypted cloud backup. The foundation for user-controlled data infrastructure.</p>
             <p>
               <a href="https://folddb.com" target="_blank" rel="noreferrer" className="link-btn">[Website]</a>{'  '}
-              <a href="https://github.com/shiba4life/fold_db" target="_blank" rel="noreferrer" className="link-btn">[GitHub]</a>
+              <a href="https://github.com/EdgeVector/fold_db" target="_blank" rel="noreferrer" className="link-btn">[GitHub]</a>
             </p>
           </Card>
 
@@ -104,7 +104,7 @@ export default function Home() {
             <p><Label color="orange">FILE_TO_JSON</Label></p>
             <p>A universal ingestion pipeline for converting diverse file types into structured data for seamless data ingestion.</p>
             <p>
-              <a href="https://github.com/shiba4life/file_to_json" target="_blank" rel="noreferrer" className="link-btn">[GitHub]</a>
+              <a href="https://github.com/EdgeVector/file_to_json" target="_blank" rel="noreferrer" className="link-btn">[GitHub]</a>
             </p>
           </Card>
         </div>

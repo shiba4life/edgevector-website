@@ -7,8 +7,8 @@ export default function Footer() {
       </p>
       <p>
         <span className="dim">PROJECTS</span>{'  '}
-        <a href="https://github.com/shiba4life/fold_db" target="_blank" rel="noreferrer">FoldDB</a>{'  '}
-        <a href="https://github.com/shiba4life/file_to_json" target="_blank" rel="noreferrer">file_to_json</a>
+        <a href="https://github.com/EdgeVector/fold_db" target="_blank" rel="noreferrer">FoldDB</a>{'  '}
+        <a href="https://github.com/EdgeVector/file_to_json" target="_blank" rel="noreferrer">file_to_json</a>
       </p>
       <p>
         <span className="dim">LINKS</span>{'    '}

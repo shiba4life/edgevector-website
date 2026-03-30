@@ -82,9 +82,9 @@ export default function About() {
         <p>Edge Vector Foundation is an open community. Whether you&rsquo;re a developer, researcher, privacy advocate, or someone who believes in a better model for personal data &mdash; there&rsquo;s a place for you.</p>
 
         <p>
-          <a href="https://github.com/shiba4life/fold_db" target="_blank" rel="noreferrer" className="link-btn">[Contribute on GitHub]</a>{'  '}
-          <a href="https://github.com/shiba4life/fold_db/discussions" target="_blank" rel="noreferrer" className="link-btn">[Join the Discussion]</a>{'  '}
-          <a href="https://github.com/shiba4life/fold_db/issues" target="_blank" rel="noreferrer" className="link-btn">[Report Issues]</a>{'  '}
+          <a href="https://github.com/EdgeVector/fold_db" target="_blank" rel="noreferrer" className="link-btn">[Contribute on GitHub]</a>{'  '}
+          <a href="https://github.com/EdgeVector/fold_db/discussions" target="_blank" rel="noreferrer" className="link-btn">[Join the Discussion]</a>{'  '}
+          <a href="https://github.com/EdgeVector/fold_db/issues" target="_blank" rel="noreferrer" className="link-btn">[Report Issues]</a>{'  '}
           <Link to="/technology" className="link-btn">[Technology]</Link>{'  '}
           <Link to="/papers" className="link-btn">[Papers]</Link>
         </p>

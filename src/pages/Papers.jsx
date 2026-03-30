@@ -131,7 +131,7 @@ export default function Papers() {
 
       <div className="cta-block">
         <p>
-          <a href="https://github.com/shiba4life/fold_db" target="_blank" rel="noreferrer" className="link-btn">[Get FoldDB]</a>{'  '}
+          <a href="https://github.com/EdgeVector/fold_db" target="_blank" rel="noreferrer" className="link-btn">[Get FoldDB]</a>{'  '}
           <Link to="/technology" className="link-btn">[Technology Overview]</Link>{'  '}
           <Link to="/about" className="link-btn">[About the Foundation]</Link>
         </p>

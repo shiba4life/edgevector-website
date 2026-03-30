@@ -137,7 +137,7 @@ export default function Technology() {
         <p>Want the full technical details?</p>
         <p>
           <Link to="/papers" className="link-btn">[Read the Papers]</Link>{'  '}
-          <a href="https://github.com/shiba4life/fold_db" target="_blank" rel="noreferrer" className="link-btn">[View the Source]</a>
+          <a href="https://github.com/EdgeVector/fold_db" target="_blank" rel="noreferrer" className="link-btn">[View the Source]</a>
         </p>
       </div>
     </>
