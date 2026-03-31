@@ -39,9 +39,7 @@ const TABS = [
     id: 'patents',
     label: 'Patents',
     pdfs: [
-      { label: 'Compute Without Exposure', href: '/docs/corporate/patent_compute_without_exposure.pdf' },
-      { label: 'Vectorized Discovery', href: '/docs/corporate/patent_vectorized_discovery.pdf' },
-      { label: 'Schema Canonical Service', href: '/docs/corporate/patent_schema_canonical_service.pdf' },
+      { label: 'Pseudonymous Vectorized Discovery', href: '/docs/corporate/patent_vectorized_discovery.pdf' },
       { label: 'Verified WASM Execution', href: '/docs/corporate/patent_verified_wasm_execution.pdf' },
     ],
   },
