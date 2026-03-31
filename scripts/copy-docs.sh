@@ -39,6 +39,8 @@ cp "$WORKSPACE/docs/corporate/patent_schema_canonical_service.md" "$DEST/corpora
 cp "$WORKSPACE/docs/corporate/patent_compute_without_exposure.pdf" "$DEST/corporate/"
 cp "$WORKSPACE/docs/corporate/patent_vectorized_discovery.pdf" "$DEST/corporate/"
 cp "$WORKSPACE/docs/corporate/patent_schema_canonical_service.pdf" "$DEST/corporate/"
+cp "$WORKSPACE/docs/corporate/patent_verified_wasm_execution.md" "$DEST/corporate/" 2>/dev/null || true
+cp "$WORKSPACE/docs/corporate/patent_verified_wasm_execution.pdf" "$DEST/corporate/"
 
 # Progress
 cp "$WORKSPACE/docs/progress/roadmap.md" "$DEST/progress/"
