@@ -43,6 +43,11 @@ const TABS = [
       '/docs/corporate/patent_vectorized_discovery.md',
       '/docs/corporate/patent_schema_canonical_service.md',
     ],
+    pdfs: [
+      { label: 'Compute Without Exposure', href: '/docs/corporate/patent_compute_without_exposure.pdf' },
+      { label: 'Vectorized Discovery', href: '/docs/corporate/patent_vectorized_discovery.pdf' },
+      { label: 'Schema Canonical Service', href: '/docs/corporate/patent_schema_canonical_service.pdf' },
+    ],
   },
   {
     id: 'video',
@@ -179,6 +184,30 @@ export default function Internal() {
           >
             Your browser does not support the video tag.
           </video>
+        </div>
+      )}
+
+      {tab && tab.pdfs && (
+        <div style={{ marginBottom: '2em', display: 'flex', gap: '1em', flexWrap: 'wrap' }}>
+          {tab.pdfs.map(pdf => (
+            <a
+              key={pdf.href}
+              href={pdf.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                padding: '0.5em 1em',
+                border: '2px solid #0a0a0a',
+                fontFamily: 'inherit',
+                fontSize: '0.85em',
+                letterSpacing: '0.05em',
+                textDecoration: 'none',
+                color: '#0a0a0a',
+              }}
+            >
+              PDF: {pdf.label}
+            </a>
+          ))}
         </div>
       )}
 

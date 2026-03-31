@@ -36,6 +36,9 @@ cp "$WORKSPACE/docs/corporate/conflict_of_interest_policy.md" "$DEST/corporate/"
 cp "$WORKSPACE/docs/corporate/patent_compute_without_exposure.md" "$DEST/corporate/"
 cp "$WORKSPACE/docs/corporate/patent_vectorized_discovery.md" "$DEST/corporate/"
 cp "$WORKSPACE/docs/corporate/patent_schema_canonical_service.md" "$DEST/corporate/"
+cp "$WORKSPACE/docs/corporate/patent_compute_without_exposure.pdf" "$DEST/corporate/"
+cp "$WORKSPACE/docs/corporate/patent_vectorized_discovery.pdf" "$DEST/corporate/"
+cp "$WORKSPACE/docs/corporate/patent_schema_canonical_service.pdf" "$DEST/corporate/"
 
 # Progress
 cp "$WORKSPACE/docs/progress/roadmap.md" "$DEST/progress/"
