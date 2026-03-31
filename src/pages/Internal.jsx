@@ -38,11 +38,6 @@ const TABS = [
   {
     id: 'patents',
     label: 'Patents',
-    docs: [
-      '/docs/corporate/patent_compute_without_exposure.md',
-      '/docs/corporate/patent_vectorized_discovery.md',
-      '/docs/corporate/patent_schema_canonical_service.md',
-    ],
     pdfs: [
       { label: 'Compute Without Exposure', href: '/docs/corporate/patent_compute_without_exposure.pdf' },
       { label: 'Vectorized Discovery', href: '/docs/corporate/patent_vectorized_discovery.pdf' },
