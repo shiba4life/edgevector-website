@@ -9,27 +9,28 @@ This document tracks the foundation-level roadmap across all EdgeVector reposito
 What's built and working today.
 
 - [x] **FoldDB core database** — schema system, field-level types, Sled storage, encrypted-at-rest (AES-256-GCM via HKDF-SHA256)
-- [x] **AI-powered ingestion** — file-to-JSON conversion via OpenRouter/Ollama, natural language query, schema inference
-- [x] **file_to_json crate** — published to crates.io (v0.4.0), supports CSV, JSON, YAML, TOML, PDF, images
-- [x] **Cloud deployment** — AWS CDK infrastructure, 3 Rust Lambda functions, 11 DynamoDB tables, S3, CloudFront, API Gateway
+- [x] **AI-powered ingestion** — file-to-JSON conversion via OpenRouter/Ollama/Anthropic, natural language query, schema inference
+- [x] **Cloud deployment** — AWS CDK infrastructure, 10+ Rust Lambda functions (layered architecture), S3, CloudFront, API Gateway
 - [x] **Multi-tenant isolation** — user_hash-based partitioning across DynamoDB and S3
-- [x] **Ed25519 node identity** — keypair generation for node identity
-- [x] **Web UI** — React frontend for local FoldDB interaction
-- [x] **CI/CD** — GitHub Actions across fold_db, fold_db_node, exemem-infra, file_to_json
-- [x] **Formal access control model** — trust distance, capability tokens, payment gates, security labels (fold_db_core)
+- [x] **Ed25519 node identity + molecule signing** — every node has a keypair; every molecule write is signed by the writer, providing cryptographic provenance on all data changes
+- [x] **Web UI** — React frontend: schemas, queries, mutations, ingestion, AI queries, personas, fingerprints, sharing
+- [x] **CI/CD** — GitHub Actions across fold_db, fold_db_node, exemem-infra, schema-infra
+- [x] **AccessTier access control** — per-field access tiers (0=Public … 4=Owner); formerly TrustTier (manifesto #4)
+- [x] **Passkey / Ed25519 auth** — node activation via Ed25519 keypair, passkey web recovery
 - [x] **Design documentation** — architecture decisions, authorization flow, data access model
 
 ---
 
-## Phase 1: Core Access Control Integration (Current)
+## Phase 1: Core Systems (Current)
 
-Integrate the formal access control model from fold_db_core into the production FoldDB database.
+Shipped or in progress.
 
-- [ ] **Integrate trust distance graph** — port from fold_db_core into fold_db
-- [ ] **Integrate capability tokens** — bounded read/write quotas (WX_k / RX_k)
-- [ ] **Integrate security labels** — classification-based access filtering
-- [ ] **Integrate payment gates** — linear, exponential, fixed cost models
-- [ ] **Field-level access control enforcement** — evaluate all four layers at query time
+- [x] **AccessTier integration** — three-layer field access (AccessTier, capability tokens, payment gates) in fold_db
+- [x] **Cross-user sharing** — share rules as signed molecules, pending invites store, from:{sender} query scans, sync engine auto-refresh (PRs #545–#549)
+- [x] **Fingerprints Phase 1–3** — Fingerprint/Persona/Identity schemas; face detection endpoint (`POST /detect-faces`); Identity Card issue/receive/import; auto-polling received cards; QR scanner
+- [x] **Schema registry canonical fields** — builtin_canonical_fields seeded at cold start in schema-infra; S3 blob persistence; fastembed Lambda Layer
+- [x] **Exemem cloud hardening** — API Gateway throttling, CORS wildcard fix, session token drift tightening, ApiError standardization, API key revocation isolation
+- [x] **Lambda architecture refactor** — org_service split, storage_admin_service split, exemem_common consolidation, data-driven CDK Lambda config
 - [ ] **Monadic fold evaluation** — all-or-nothing semantics, uniform `Nothing` on failure
 - [ ] **Complete fold_db/fold_db_node split** — finish extracting app layer from fold_db monolith
 
@@ -65,12 +66,13 @@ Transform Exemem from a read-write service into a dumb encrypted relay.
 
 Computed views over source data. Required before third-party app access — apps need to define their own views over user data rather than being locked into the user's raw schema.
 
-- [ ] **Transform folds** — WASM-based computed views over source schemas
+- [x] **Schema similarity detection** — live at schema.folddb.com; fastembed embedding + S3 blob persistence
+- [x] **Canonical schema registry** — Phase 1 built-in canonical fields seeded globally (fingerprints, identities)
+- [ ] **Transform folds** — WASM-based computed views over source schemas (design doc: `docs/design/transform_views_design.md`)
 - [ ] **Invertibility verification** — round-trip testing at registration
 - [ ] **Lazy evaluation** — compute on read, cache with staleness tracking
 - [ ] **Dependency tracking** — invalidate derived data when source changes
-- [ ] **Canonical schema standards** — define standard schemas for common data types (posts, media, contacts, health)
-- [ ] **Schema similarity detection** — prevent duplicate schemas across the ecosystem
+- [ ] **Canonical schema standards** — standard schemas for common types (posts, media, contacts, health)
 
 ---
 
@@ -106,7 +108,7 @@ Enable external applications to access user data through the consent flow. Depen
 |:---|:---|:---|
 | Passkey auth | Passkey → Argon2id → HKDF → master key | HKDF-SHA256 from local secret |
 | E2E relay | Exemem sees only ciphertext | Exemem sees plaintext |
-| Access control | Trust distance + capabilities + labels + payment | Implemented in fold_db_core, not integrated into fold_db |
+| Access control | Trust distance + capabilities + labels + payment | AccessTier + capability tokens + payment gates shipped in fold_db; trust distance and security labels not yet implemented |
 | App access | Scoped JWTs + encrypted requests | Basic API key auth |
 | Transform views | WASM-based computed folds | Design doc only |
 | Multi-device | Encrypted config blob on Exemem | Not implemented |
