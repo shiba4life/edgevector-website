@@ -103,10 +103,10 @@ Section 2.3. Term. Each director shall serve a term of one (1) year.
 Directors may serve unlimited consecutive terms.
 
 Section 2.4. Election. Directors shall be elected by a majority vote of
-the existing Board, subject to the approval of the Founder Chairman.
+the existing Board.
 
 Section 2.5. Removal. Any director may be removed with or without cause
-by a two-thirds vote of the remaining directors, subject to the approval of the Founder Chairman.
+by a two-thirds vote of the remaining directors.
 
 Section 2.6. Vacancies. Vacancies shall be filled by majority vote of the
 remaining directors.
@@ -124,22 +124,20 @@ Section 2.10. Compensation. Directors shall not receive compensation for
 service as directors but may be reimbursed for reasonable expenses.
 
 ARTICLE III — OFFICERS
-Section 3.1. Officers. The officers shall be a Founder Chairman, President, Secretary, and
+Section 3.1. Officers. The officers shall be a President, Secretary, and
 Treasurer. One person may hold multiple offices except that the President
 and Secretary shall not be the same person.
 
-Section 3.2. Founder Chairman. Tom Tang shall serve as the Founder Chairman. To ensure the original vision of the Foundation is maintained, the Founder Chairman holds control over major decisions and retains veto power over significant corporate actions, including but not limited to board appointments, bylaw amendments, budget approvals, and strategic direction.
+Section 3.2. President. The President shall be the chief executive officer,
+preside at Board meetings, and execute documents on behalf of the corporation.
 
-Section 3.3. President. The President shall be the chief executive officer,
-preside at Board meetings (unless the Founder Chairman is present and chooses to preside), and execute documents on behalf of the corporation.
-
-Section 3.4. Secretary. The Secretary shall keep minutes of Board meetings,
+Section 3.3. Secretary. The Secretary shall keep minutes of Board meetings,
 maintain corporate records, and provide notices as required.
 
-Section 3.5. Treasurer. The Treasurer shall have custody of corporate funds,
+Section 3.4. Treasurer. The Treasurer shall have custody of corporate funds,
 maintain financial records, and provide financial reports to the Board.
 
-Section 3.6. Term. Officers shall serve one-year terms and may be re-elected, except for the Founder Chairman role which is a permanent appointment.
+Section 3.5. Term. Officers shall serve one-year terms and may be re-elected.
 
 ARTICLE IV — CONFLICT OF INTEREST
 Section 4.1. See attached Conflict of Interest Policy (required by IRS).
@@ -276,7 +274,6 @@ Present: Tom Tang, Fei Jia, Cedric Hurst
 
 4. ELECTION OF OFFICERS
    Upon motion duly made and seconded, the following officers were elected:
-   - Founder Chairman: Tom Tang
    - President: Tom Tang
    - Treasurer: Fei Jia
    - Secretary: Cedric Hurst
