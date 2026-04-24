@@ -24,8 +24,7 @@ cp "$WORKSPACE/docs/product/WHITEPAPER.md" "$DEST/product/"
 cp "$WORKSPACE/docs/product/PRD.md" "$DEST/product/"
 
 # Design docs
-cp "$WORKSPACE/docs/design/DATA_ACCESS_ARCHITECTURE.md" "$DEST/design/"
-cp "$WORKSPACE/docs/design/THIRD_PARTY_APP_AUTHORIZATION.md" "$DEST/design/"
+cp "$WORKSPACE/docs/design/SYSTEMS_OVERVIEW.md" "$DEST/design/"
 
 # Corporate
 cp "$WORKSPACE/docs/corporate/nonprofit_edge_vector_foundation.md" "$DEST/corporate/"

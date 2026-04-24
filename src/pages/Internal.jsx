@@ -14,8 +14,7 @@ const TABS = [
     id: 'architecture',
     label: 'Architecture',
     docs: [
-      '/docs/design/DATA_ACCESS_ARCHITECTURE.md',
-      '/docs/design/THIRD_PARTY_APP_AUTHORIZATION.md',
+      '/docs/design/SYSTEMS_OVERVIEW.md',
     ],
   },
   {
