@@ -8,12 +8,16 @@ export default function Footer() {
       <p>
         <span className="dim">PROJECTS</span>{'  '}
         <a href="https://github.com/EdgeVector/fold_db" target="_blank" rel="noreferrer">FoldDB</a>{'  '}
-        <a href="https://github.com/EdgeVector/file_to_json" target="_blank" rel="noreferrer">file_to_json</a>
+        <a href="https://github.com/EdgeVector/file_to_markdown" target="_blank" rel="noreferrer">file_to_markdown</a>
       </p>
       <p>
         <span className="dim">LINKS</span>{'    '}
         <a href="https://folddb.com" target="_blank" rel="noreferrer">folddb.com</a>{'  '}
         <a href="https://exemem.com" target="_blank" rel="noreferrer">exemem.com</a>
+      </p>
+      <p>
+        <span className="dim">CONTACT</span>{'  '}
+        <a href="mailto:contact@edgevector.org">contact@edgevector.org</a>
       </p>
       <p className="dim">&copy; 2025-2026 Edge Vector Foundation &mdash; Your data. Your control.</p>
     </footer>

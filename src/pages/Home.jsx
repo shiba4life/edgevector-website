@@ -43,6 +43,8 @@ export default function Home() {
 
       <p>We are building an <span className="bold white">open ecosystem</span> that enables secure computation on personal data while enabling anonymized data discovery and user-directed sharing.</p>
 
+      <p>This makes a new generation of <span className="bold white">on-device AI</span> possible: assistants and agents that can reason over your full personal context &mdash; your notes, files, calendar, messages &mdash; running on your device, with your data never leaving it.</p>
+
       <Section variant="slate">
         <h2><span className="bold">WHAT WE BUILD</span></h2>
 
@@ -101,13 +103,15 @@ export default function Home() {
           </Card>
 
           <Card>
-            <p><Label color="orange">FILE_TO_JSON</Label></p>
-            <p>A universal ingestion pipeline for converting diverse file types into structured data for seamless data ingestion.</p>
+            <p><Label color="orange">FILE_TO_MARKDOWN</Label></p>
+            <p>A universal ingestion pipeline for converting diverse file types into structured Markdown for seamless data ingestion.</p>
             <p>
-              <a href="https://github.com/EdgeVector/file_to_json" target="_blank" rel="noreferrer" className="link-btn">[GitHub]</a>
+              <a href="https://github.com/EdgeVector/file_to_markdown" target="_blank" rel="noreferrer" className="link-btn">[GitHub]</a>
             </p>
           </Card>
         </div>
+
+        <p className="dim">Edge Vector is currently in active research and development. The FoldDB core is open source on <a href="https://github.com/EdgeVector/fold_db" target="_blank" rel="noreferrer">GitHub</a> for review and contribution.</p>
       </Section>
 
       <div className="cta-block">
@@ -116,7 +120,8 @@ export default function Home() {
         <p>
           <Link to="/technology" className="link-btn">[Technology]</Link>{'  '}
           <Link to="/papers" className="link-btn">[Papers]</Link>{'  '}
-          <Link to="/about" className="link-btn">[About the Foundation]</Link>
+          <Link to="/about" className="link-btn">[About the Foundation]</Link>{'  '}
+          <a href="mailto:contact@edgevector.org" className="link-btn">[Contact]</a>
         </p>
       </div>
     </>
