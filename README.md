@@ -30,7 +30,7 @@ contents as-is.
 
 ## Source Of Truth
 
-This repository is homed at `lastdb:///edgevector-website`. LastGit change
+This repository is homed at `http://localhost:3300/EdgeVector/edgevector-website.git`. LastGit change
 requests and `.lastgit/ci.sh` are the merge gate; GitHub is a read-only public
 mirror for clone and browse workflows. Repo-local GitHub Actions are
 intentionally inert.
